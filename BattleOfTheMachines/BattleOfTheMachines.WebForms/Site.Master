@@ -13,7 +13,8 @@
     </asp:PlaceHolder>
     <webopt:bundlereference runat="server" path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-
+    <link href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
 </head>
 <body>
     <form runat="server">
@@ -34,7 +35,9 @@
                 <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
                 <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
                 <asp:ScriptReference Name="WebFormsBundle" />
-                <%--Site Scripts--%>
+                <%--Site Scripts--%>              
+                <asp:ScriptReference Path="~/Scripts/ripples.min.js" />
+                <asp:ScriptReference Path="~/Scripts/material.min.js" />
             </Scripts>
         </asp:ScriptManager>
 
@@ -82,5 +85,8 @@
             </footer>
         </div>
     </form>
+    <script> 
+        $.material.init();
+    </script>
 </body>
 </html>
