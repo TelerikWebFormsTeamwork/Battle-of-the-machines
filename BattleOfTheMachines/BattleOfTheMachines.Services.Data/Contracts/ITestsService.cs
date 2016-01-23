@@ -1,7 +1,9 @@
 ﻿namespace BattleOfTheMachines.Services.Data.Contracts
 {
-    public interface ITestsService
+    using BattleOfTheMachines.Data.Models.Enums;
+
+    public interface IQuestsService
     {
-        void Add(string name);
+        void Add(string name, string description, float duration, byte[] image, PartType specialization);
     }
 }

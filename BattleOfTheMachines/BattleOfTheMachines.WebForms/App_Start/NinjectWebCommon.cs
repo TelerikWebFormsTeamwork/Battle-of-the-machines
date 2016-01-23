@@ -73,7 +73,7 @@ namespace BattleOfTheMachines.WebForms.App_Start
         {
             DependenciesRegistration(kernel);
 
-            kernel.Bind<ITestsService>().To<TestsService>().InRequestScope();
+            kernel.Bind<IQuestsService>().To<QuestsService>().InRequestScope();
         }        
     }
 }
