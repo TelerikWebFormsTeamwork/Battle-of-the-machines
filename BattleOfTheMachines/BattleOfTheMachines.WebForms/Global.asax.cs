@@ -22,6 +22,8 @@ namespace BattleOfTheMachines.WebForms
         {
             // Code that runs on application startup
             Database.SetInitializer(new MigrateDatabaseToLatestVersion<BattleOfTheMachinesDbContext, Configuration>());
+            BattleOfTheMachinesDbContext.Create().Database.Initialize(true);
+
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
         }

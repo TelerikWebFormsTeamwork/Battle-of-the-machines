@@ -13,6 +13,14 @@
 
         public virtual IDbSet<Test> Tests { get; set; }
 
+        public virtual IDbSet<GraphicsCard> GraphicsCards { get; set; }
+
+        public virtual IDbSet<Ram> Rams { get; set; }
+
+        public virtual IDbSet<Network> Networks { get; set; }
+
+        public virtual IDbSet<Cpu> Processors { get; set; }
+
         public static BattleOfTheMachinesDbContext Create()
         {
             return new BattleOfTheMachinesDbContext();

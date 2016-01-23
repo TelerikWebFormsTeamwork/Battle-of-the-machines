@@ -28,17 +28,51 @@ namespace BattleOfTheMachines.Data.Migrations
                 context.Roles.Add(new IdentityRole { Name = "Admin" });
                 context.SaveChanges();
             }
+            
+            if (!context.GraphicsCards.Any())
+            {
+                var graphicsImageBytes = File.ReadAllBytes(this.MapPath("~/Images/graphics_default.png"));
+                var card = new GraphicsCard()
+                               {
+                                   Cores = 1,
+                                   CoreSpeed = 0,
+                                   Image = graphicsImageBytes,
+                                   Model = "6502",
+                                   VideoMemory = 1
+                               };
+                context.GraphicsCards.Add(card);
+                context.SaveChanges();
+            }
 
-            var b = Directory.GetCurrentDirectory();
-            var absolutePath = new Uri(Assembly.GetExecutingAssembly().CodeBase).AbsolutePath;
-            var graphicsImage = File.ReadAllBytes(MapPath("~/Images/graphics_default.png"));
-            var a = 5;
+            if (!context.Processors.Any())
+            {
+                var processorImageBytes = File.ReadAllBytes(this.MapPath("~/Images/processor_default.png"));
+                context.Processors.Add(
+                    new Cpu() { Cores = 1, CoreSpeed = 1, Image = processorImageBytes, Model = "6502" });
+                context.SaveChanges();
+            }
+
+            if (!context.Networks.Any())
+            {
+                var networkImageBytes = File.ReadAllBytes(this.MapPath("~/Images/network_default.png"));
+                context.Networks.Add(new Network() { Image = networkImageBytes, Speed = 1, Type = "Dial-up" });
+                context.SaveChanges();
+            }
+
+            if (!context.Rams.Any())
+            {
+                var memoryImageBytes = File.ReadAllBytes(this.MapPath("~/Images/memory_default.png"));
+                context.Rams.Add(new Ram() { Image = memoryImageBytes, Memory = 1, MemorySpeed = 1, Model = "Ancient" });
+                context.SaveChanges();
+            }
         }
 
         private string MapPath(string seedFile)
         {
             if (HttpContext.Current != null)
+            {
                 return HostingEnvironment.MapPath(seedFile);
+            }
 
             var absolutePath = new Uri(Assembly.GetExecutingAssembly().CodeBase).AbsolutePath;
             var directoryName = Path.GetDirectoryName(absolutePath);
