@@ -5,7 +5,7 @@ namespace BattleOfTheMachines.Data.Migrations
 
     using Microsoft.AspNet.Identity.EntityFramework;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<BattleOfTheMachines.Data.BattleOfTheMachinesDbContext>
+    public sealed class Configuration : DbMigrationsConfiguration<BattleOfTheMachines.Data.BattleOfTheMachinesDbContext>
     {
         public Configuration()
         {
