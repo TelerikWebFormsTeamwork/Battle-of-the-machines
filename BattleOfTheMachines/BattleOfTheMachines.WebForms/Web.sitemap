@@ -5,6 +5,7 @@
         <siteMapNode url="~/Contact" title="Contact"  description="Contact" />
       <siteMapNode title="Users">
         <siteMapNode title="Profile" description="Profile page" url="~/Users/Profile"/>
+        <siteMapNode title="Tutorial" description="Game start up tutorial" url="~/Users/Tutorial"/>
       </siteMapNode>
     </siteMapNode>
 </siteMap>
