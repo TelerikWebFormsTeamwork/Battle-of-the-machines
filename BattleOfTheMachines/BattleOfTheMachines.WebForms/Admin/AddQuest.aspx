@@ -35,10 +35,10 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="image" class="col-md-2 control-label">Image</label>
+                            <asp:Label runat="server" AssociatedControlID="questImage" CssClass="col-md-2 control-label">Image</asp:Label>
                             <div class="col-md-10">
                                 <input type="text" readonly="" class="form-control" placeholder="Browse...">
-                                <input type="file" id="image" multiple="" runat="server">
+                                <asp:FileUpload runat="server" ID="questImage"/>
                             </div>
                         </div>
                         <div class="form-group">
