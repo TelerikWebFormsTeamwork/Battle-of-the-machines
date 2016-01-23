@@ -11,7 +11,7 @@
         {
         }
 
-        public virtual IDbSet<Test> Tests { get; set; }
+        public virtual IDbSet<Quest> Quests { get; set; }
 
         public static BattleOfTheMachinesDbContext Create()
         {
