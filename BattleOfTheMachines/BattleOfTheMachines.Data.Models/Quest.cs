@@ -25,5 +25,8 @@
         public byte[] Image { get; set; }
 
         public PartType Specialization { get; set; }
+
+        [Required]
+        public float PowerRequired { get; set; }
     }
 }

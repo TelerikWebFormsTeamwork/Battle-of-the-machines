@@ -35,6 +35,12 @@
                             </div>
                         </div>
                         <div class="form-group">
+                            <label for="powerRequired" class="col-md-2 control-label">Required power</label>
+                            <div class="col-md-10">
+                                <input type="number" step="0.01" class="form-control" id="powerRequired" runat="server" min="0" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
                             <asp:Label runat="server" AssociatedControlID="questImage" CssClass="col-md-2 control-label">Image</asp:Label>
                             <div class="col-md-10">
                                 <input type="text" readonly="" class="form-control" placeholder="Browse...">

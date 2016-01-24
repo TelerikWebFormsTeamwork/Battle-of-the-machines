@@ -15,13 +15,14 @@
             this.quests = quests;
         }
 
-        public void Add(string name, string description, float duration, byte[] image, PartType specialization)
+        public void Add(string name, string description, float duration, float powerRequired, byte[] image, PartType specialization)
         {
             var newQuest = new Quest
             {
                 Name = name,
                 Description = description,
                 DurationInMinutes = duration,
+                PowerRequired = powerRequired,
                 Image = image,
                 Specialization = specialization
             };

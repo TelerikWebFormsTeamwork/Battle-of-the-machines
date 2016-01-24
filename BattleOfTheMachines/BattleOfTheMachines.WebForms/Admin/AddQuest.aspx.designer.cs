@@ -49,6 +49,15 @@ namespace BattleOfTheMachines.WebForms.Admin {
         protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl duration;
         
         /// <summary>
+        /// powerRequired control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl powerRequired;
+        
+        /// <summary>
         /// questImage control.
         /// </summary>
         /// <remarks>

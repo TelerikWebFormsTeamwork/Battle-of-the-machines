@@ -40,5 +40,7 @@
         public Guid NetworkId { get; set; }
 
         public Network Network { get; set; }
+
+        public DateTime? OnQuestUntil { get; set; }
     }
 }
