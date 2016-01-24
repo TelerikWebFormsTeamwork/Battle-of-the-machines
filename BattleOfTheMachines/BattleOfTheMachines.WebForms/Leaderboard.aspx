@@ -9,6 +9,13 @@
         AllowPaging="True" AllowSorting="True"
         PageSize="50"
         AutoGenerateColumns="false">
+        <LayoutTemplate>
+            <div class="sort-link">
+                <asp:LinkButton runat="server" ID="SortByName" CommandName="Sort" CssClass="btn btn-sm btn-primary" CommandArgument="Name">Sort by Name</asp:LinkButton>
+                <asp:LinkButton runat="server" ID="SortByPosition" CommandName="Sort" CssClass="btn btn-sm btn-primary" CommandArgument="Position">Sort by Position</asp:LinkButton>
+            </div>
+            <asp:PlaceHolder runat="server" ID="itemPlaceholder"></asp:PlaceHolder>
+        </LayoutTemplate>
         <ItemTemplate>
             <div>
                 <asp:Label runat="server"><%# Item.Name %></asp:Label>
