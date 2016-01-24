@@ -33,7 +33,7 @@
             }
             else
             {
-                this.Gpus.Add(model.Text, float.Parse(coreSpeed.Value), ushort.Parse(cores.Value), gpuImage.FileBytes, int.Parse(vRAM.Value));
+                this.Gpus.Add(model.Text, float.Parse(coreSpeed.Value), ushort.Parse(cores.Value), null, int.Parse(vRAM.Value));
                 Server.Transfer("../Default.aspx", true);
             }
         }

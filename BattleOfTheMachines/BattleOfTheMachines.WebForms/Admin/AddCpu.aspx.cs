@@ -33,7 +33,7 @@
             }
             else
             {
-                this.Cpus.Add(model.Text, float.Parse(coreSpeed.Value), ushort.Parse(cores.Value), cpuImage.FileBytes);
+                this.Cpus.Add(model.Text, float.Parse(coreSpeed.Value), ushort.Parse(cores.Value), null);
                 Server.Transfer("../Default.aspx", true);
             }
         }

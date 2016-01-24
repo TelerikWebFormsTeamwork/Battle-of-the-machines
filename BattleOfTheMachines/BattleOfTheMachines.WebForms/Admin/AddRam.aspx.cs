@@ -1,25 +1,24 @@
 ﻿namespace BattleOfTheMachines.WebForms.Admin
 {
-    using BattleOfTheMachines.Services.Data.Contracts;
     using Ninject;
+    using Services.Data.Contracts;
     using System;
 
-    public partial class AddNetwork : System.Web.UI.Page
+    public partial class AddRam : System.Web.UI.Page
     {
-
         [Inject]
-        public INetworksService Networks { get; set; }
+        public IRamsService Rams { get; set; }
 
-        protected void AddNetwork_Click(object sender, EventArgs e)
+        protected void AddRam_Click(object sender, EventArgs e)
         {
-            if (networkImage.HasFile)
+            if (ramImage.HasFile)
             {
-                if (networkImage.PostedFile.ContentType == "image/jpeg"
-                    || networkImage.PostedFile.ContentType == "image/png")
+                if (ramImage.PostedFile.ContentType == "image/jpeg"
+                    || ramImage.PostedFile.ContentType == "image/png")
                 {
-                    if (networkImage.PostedFile.ContentLength < 3 * 102400)
+                    if (ramImage.PostedFile.ContentLength < 3 * 102400)
                     {
-                        this.Networks.Add(type.Text, int.Parse(speed.Value), networkImage.FileBytes);
+                        this.Rams.Add(model.Text, float.Parse(memorySpeed.Value), ramImage.FileBytes, int.Parse(memory.Value));
                         Server.Transfer("../Default.aspx", true);
                     }
                     else
@@ -34,7 +33,7 @@
             }
             else
             {
-                this.Networks.Add(type.Text, int.Parse(speed.Value), null);
+                this.Rams.Add(model.Text, float.Parse(memorySpeed.Value), null, int.Parse(memory.Value));
                 Server.Transfer("../Default.aspx", true);
             }
         }

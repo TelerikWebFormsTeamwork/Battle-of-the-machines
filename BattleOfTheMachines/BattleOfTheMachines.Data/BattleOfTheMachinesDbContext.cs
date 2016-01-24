@@ -19,6 +19,8 @@
 
         public virtual IDbSet<Network> Networks { get; set; }
 
+        public virtual IDbSet<Ram> Rams { get; set; }
+
         public static BattleOfTheMachinesDbContext Create()
         {
             return new BattleOfTheMachinesDbContext();

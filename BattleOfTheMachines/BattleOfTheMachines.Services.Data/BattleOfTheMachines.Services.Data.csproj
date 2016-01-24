@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="Contracts\IGpusService.cs" />
     <Compile Include="Contracts\INetworksService.cs" />
+    <Compile Include="Contracts\IRamsService.cs" />
     <Compile Include="CpusService.cs" />
     <Compile Include="Contracts\ICpusService.cs" />
     <Compile Include="Contracts\IQuestsService.cs" />
@@ -49,6 +50,7 @@
     <Compile Include="NetworksService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QuestsService.cs" />
+    <Compile Include="RamsService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BattleOfTheMachines.Data.Models\BattleOfTheMachines.Data.Models.csproj">

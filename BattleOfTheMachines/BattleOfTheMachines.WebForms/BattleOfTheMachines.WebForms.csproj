@@ -218,6 +218,7 @@
     <Content Include="Admin\AddGpu.aspx" />
     <Content Include="Admin\AddNetwork.aspx" />
     <Content Include="Admin\AddQuest.aspx" />
+    <Content Include="Admin\AddRam.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-material-design.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -419,6 +420,13 @@
     </Compile>
     <Compile Include="Admin\AddQuest.aspx.designer.cs">
       <DependentUpon>AddQuest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AddRam.aspx.cs">
+      <DependentUpon>AddRam.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AddRam.aspx.designer.cs">
+      <DependentUpon>AddRam.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">
