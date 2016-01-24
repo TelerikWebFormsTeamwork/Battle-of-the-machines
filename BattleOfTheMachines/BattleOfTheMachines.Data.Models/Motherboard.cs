@@ -45,6 +45,6 @@
         [Required]
         public Guid NetworkId { get; set; }
 
-        public Network Network { get; set; }
+        public virtual Network Network { get; set; }
     }
 }

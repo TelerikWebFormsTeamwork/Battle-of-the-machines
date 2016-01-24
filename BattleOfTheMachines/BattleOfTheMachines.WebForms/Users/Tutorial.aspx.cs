@@ -39,9 +39,9 @@
             {
                 db.SaveChanges();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                
+                // ignored
             }
         }
     }
