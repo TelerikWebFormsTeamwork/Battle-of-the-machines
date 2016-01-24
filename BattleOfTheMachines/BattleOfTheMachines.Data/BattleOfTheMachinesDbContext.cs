@@ -21,6 +21,8 @@
 
         public virtual IDbSet<Cpu> Processors { get; set; }
 
+        public virtual IDbSet<Motherboard> Machines { get; set; }
+
         public static BattleOfTheMachinesDbContext Create()
         {
             return new BattleOfTheMachinesDbContext();
