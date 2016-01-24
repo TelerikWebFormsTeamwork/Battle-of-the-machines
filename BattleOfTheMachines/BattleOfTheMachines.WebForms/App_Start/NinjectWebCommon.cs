@@ -75,6 +75,7 @@ namespace BattleOfTheMachines.WebForms.App_Start
 
             kernel.Bind<IQuestsService>().To<QuestsService>().InRequestScope();
             kernel.Bind<ICpusService>().To<CpusService>().InRequestScope();
+            kernel.Bind<IGpusService>().To<GpusService>().InRequestScope();
         }        
     }
 }

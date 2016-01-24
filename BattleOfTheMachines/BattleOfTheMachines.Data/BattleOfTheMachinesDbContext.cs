@@ -15,6 +15,8 @@
 
         public virtual IDbSet<Cpu> Cpus { get; set; }
 
+        public virtual IDbSet<GraphicsCard> Gpus { get; set; }
+
         public static BattleOfTheMachinesDbContext Create()
         {
             return new BattleOfTheMachinesDbContext();
