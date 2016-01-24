@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BattleOfTheMachines.WebForms.App_Start;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -14,6 +15,7 @@ namespace BattleOfTheMachines.WebForms
         void Application_Start(object sender, EventArgs e)
         {
             // Code that runs on application startup
+            DatabaseConfig.Initialize();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
         }

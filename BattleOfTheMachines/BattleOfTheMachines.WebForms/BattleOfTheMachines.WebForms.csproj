@@ -214,6 +214,7 @@
     <Content Include="Account\ResetPasswordConfirmation.aspx" />
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
+    <Content Include="Admin\AddCpu.aspx" />
     <Content Include="Admin\AddQuest.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-material-design.min.css" />
@@ -389,6 +390,13 @@
     <Compile Include="Account\VerifyPhoneNumber.aspx.designer.cs">
       <DependentUpon>VerifyPhoneNumber.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\AddCpu.aspx.cs">
+      <DependentUpon>AddCpu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AddCpu.aspx.designer.cs">
+      <DependentUpon>AddCpu.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\AddQuest.aspx.cs">
       <DependentUpon>AddQuest.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -404,6 +412,7 @@
     <Compile Include="About.aspx.designer.cs">
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
+    <Compile Include="App_Start\DatabaseConfig.cs" />
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\NinjectWeb.cs" />
     <Compile Include="App_Start\NinjectWebCommon.cs" />

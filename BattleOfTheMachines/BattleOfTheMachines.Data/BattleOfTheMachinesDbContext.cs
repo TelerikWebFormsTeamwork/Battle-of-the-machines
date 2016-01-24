@@ -13,6 +13,8 @@
 
         public virtual IDbSet<Quest> Quests { get; set; }
 
+        public virtual IDbSet<Cpu> Cpus { get; set; }
+
         public static BattleOfTheMachinesDbContext Create()
         {
             return new BattleOfTheMachinesDbContext();
