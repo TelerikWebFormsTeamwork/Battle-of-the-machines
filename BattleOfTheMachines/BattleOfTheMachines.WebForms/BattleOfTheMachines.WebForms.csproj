@@ -214,7 +214,11 @@
     <Content Include="Account\ResetPasswordConfirmation.aspx" />
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
+    <Content Include="Admin\AddCpu.aspx" />
+    <Content Include="Admin\AddGpu.aspx" />
+    <Content Include="Admin\AddNetwork.aspx" />
     <Content Include="Admin\AddQuest.aspx" />
+    <Content Include="Admin\AddRam.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-material-design.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -389,12 +393,40 @@
     <Compile Include="Account\VerifyPhoneNumber.aspx.designer.cs">
       <DependentUpon>VerifyPhoneNumber.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\AddCpu.aspx.cs">
+      <DependentUpon>AddCpu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AddCpu.aspx.designer.cs">
+      <DependentUpon>AddCpu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AddGpu.aspx.cs">
+      <DependentUpon>AddGpu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AddGpu.aspx.designer.cs">
+      <DependentUpon>AddGpu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AddNetwork.aspx.cs">
+      <DependentUpon>AddNetwork.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AddNetwork.aspx.designer.cs">
+      <DependentUpon>AddNetwork.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\AddQuest.aspx.cs">
       <DependentUpon>AddQuest.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Admin\AddQuest.aspx.designer.cs">
       <DependentUpon>AddQuest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AddRam.aspx.cs">
+      <DependentUpon>AddRam.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AddRam.aspx.designer.cs">
+      <DependentUpon>AddRam.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">
@@ -404,6 +436,7 @@
     <Compile Include="About.aspx.designer.cs">
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
+    <Compile Include="App_Start\DatabaseConfig.cs" />
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\NinjectWeb.cs" />
     <Compile Include="App_Start\NinjectWebCommon.cs" />

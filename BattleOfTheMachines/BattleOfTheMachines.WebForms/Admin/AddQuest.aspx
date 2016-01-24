@@ -24,14 +24,14 @@
                         <div class="form-group">
                             <label for="description" class="col-md-2 control-label">Description</label>
                             <div class="col-md-10">
-                                <textarea class="form-control" rows="3" id="description" required runat="server"></textarea>
+                                <textarea class="form-control" rows="3" id="description" runat="server"></textarea>
                                 <span class="help-block">Enter some cool description so users are not bored while doing the quest ;)</span>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="duration" class="col-md-2 control-label">Duration</label>
                             <div class="col-md-10">
-                                <input type="number" class="form-control" id="duration" runat="server" required>
+                                <input type="number" class="form-control" id="duration" runat="server" min="0" required>
                             </div>
                         </div>
                         <div class="form-group">
