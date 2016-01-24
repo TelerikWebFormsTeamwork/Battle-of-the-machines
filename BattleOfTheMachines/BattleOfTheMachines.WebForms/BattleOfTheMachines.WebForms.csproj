@@ -231,6 +231,7 @@
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Images\graphics_default.png" />
+    <Content Include="Images\machine.png" />
     <Content Include="Images\memory_default.png" />
     <Content Include="Images\network_default.png" />
     <Content Include="Images\processor_default.png" />
