@@ -17,6 +17,8 @@
 
         public virtual IDbSet<GraphicsCard> Gpus { get; set; }
 
+        public virtual IDbSet<Network> Networks { get; set; }
+
         public static BattleOfTheMachinesDbContext Create()
         {
             return new BattleOfTheMachinesDbContext();

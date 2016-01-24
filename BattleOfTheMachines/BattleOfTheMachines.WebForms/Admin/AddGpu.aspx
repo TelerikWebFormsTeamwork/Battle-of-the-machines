@@ -48,7 +48,7 @@
                         </div>
                         <div class="form-group">
                             <div class="col-md-10 col-md-offset-2">
-                                <asp:Button Text="Add" runat="server" OnClick="AddCpu_Click" CssClass="btn btn-primary"/>
+                                <asp:Button Text="Add" runat="server" OnClick="AddGpu_Click" CssClass="btn btn-primary"/>
                             </div>
                         </div>
                     </fieldset>

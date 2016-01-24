@@ -41,10 +41,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Contracts\IGpusService.cs" />
+    <Compile Include="Contracts\INetworksService.cs" />
     <Compile Include="CpusService.cs" />
     <Compile Include="Contracts\ICpusService.cs" />
     <Compile Include="Contracts\IQuestsService.cs" />
     <Compile Include="GpusService.cs" />
+    <Compile Include="NetworksService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QuestsService.cs" />
   </ItemGroup>

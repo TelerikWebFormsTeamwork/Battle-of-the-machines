@@ -85,6 +85,7 @@
                                 <li class="dropdown-header">Items</li>
                                 <li><a runat="server" href="~/Admin/AddCpu">Add new CPU</a></li>
                                 <li><a runat="server" href="~/Admin/AddGpu">Add new GPU</a></li>
+                                <li><a runat="server" href="~/Admin/AddNetwork">Add new Network</a></li>
                             </ul>
                         </li>
                     </ul>

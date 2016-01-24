@@ -216,6 +216,7 @@
     <Content Include="Account\VerifyPhoneNumber.aspx" />
     <Content Include="Admin\AddCpu.aspx" />
     <Content Include="Admin\AddGpu.aspx" />
+    <Content Include="Admin\AddNetwork.aspx" />
     <Content Include="Admin\AddQuest.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-material-design.min.css" />
@@ -404,6 +405,13 @@
     </Compile>
     <Compile Include="Admin\AddGpu.aspx.designer.cs">
       <DependentUpon>AddGpu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AddNetwork.aspx.cs">
+      <DependentUpon>AddNetwork.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AddNetwork.aspx.designer.cs">
+      <DependentUpon>AddNetwork.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\AddQuest.aspx.cs">
       <DependentUpon>AddQuest.aspx</DependentUpon>

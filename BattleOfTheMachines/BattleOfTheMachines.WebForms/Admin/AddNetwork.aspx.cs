@@ -4,21 +4,22 @@
     using Ninject;
     using System;
 
-    public partial class AddGpu : System.Web.UI.Page
+    public partial class AddNetwork : System.Web.UI.Page
     {
-        [Inject]
-        public IGpusService Gpus { get; set; }
 
-        protected void AddGpu_Click(object sender, EventArgs e)
+        [Inject]
+        public INetworksService Networks { get; set; }
+
+        protected void AddNetwork_Click(object sender, EventArgs e)
         {
-            if (gpuImage.HasFile)
+            if (networkImage.HasFile)
             {
-                if (gpuImage.PostedFile.ContentType == "image/jpeg"
-                    || gpuImage.PostedFile.ContentType == "image/png")
+                if (networkImage.PostedFile.ContentType == "image/jpeg"
+                    || networkImage.PostedFile.ContentType == "image/png")
                 {
-                    if (gpuImage.PostedFile.ContentLength < 3 * 102400)
+                    if (networkImage.PostedFile.ContentLength < 3 * 102400)
                     {
-                        this.Gpus.Add(model.Text, float.Parse(coreSpeed.Value), ushort.Parse(cores.Value), gpuImage.FileBytes, int.Parse(vRAM.Value));
+                        this.Networks.Add(type.Text, int.Parse(speed.Value), networkImage.FileBytes);
                         Server.Transfer("../Default.aspx", true);
                     }
                     else
@@ -33,7 +34,7 @@
             }
             else
             {
-                this.Gpus.Add(model.Text, float.Parse(coreSpeed.Value), ushort.Parse(cores.Value), gpuImage.FileBytes, int.Parse(vRAM.Value));
+                this.Networks.Add(type.Text, int.Parse(speed.Value), networkImage.FileBytes);
                 Server.Transfer("../Default.aspx", true);
             }
         }
