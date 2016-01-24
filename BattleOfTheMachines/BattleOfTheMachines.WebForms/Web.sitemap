@@ -7,5 +7,6 @@
       <siteMapNode title="Profile" description="Profile page" url="~/Users/Profile"/>
       <siteMapNode title="Tutorial" description="Game start up tutorial" url="~/Users/Tutorial"/>
     </siteMapNode>
+    <siteMapNode url="~/Leaderboard" title="Leaderboard" description="Leaderboard Page"/>
   </siteMapNode>
 </siteMap>

@@ -234,6 +234,7 @@
     <Content Include="Images\memory_default.png" />
     <Content Include="Images\network_default.png" />
     <Content Include="Images\processor_default.png" />
+    <Content Include="Leaderboard.aspx" />
     <Content Include="Scripts\ai.0.15.0-build58334.js" />
     <Content Include="Scripts\ai.0.15.0-build58334.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -433,6 +434,13 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helpers\IdentityHelper.cs" />
+    <Compile Include="Leaderboard.aspx.cs">
+      <DependentUpon>Leaderboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Leaderboard.aspx.designer.cs">
+      <DependentUpon>Leaderboard.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>

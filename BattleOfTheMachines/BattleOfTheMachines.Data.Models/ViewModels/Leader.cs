@@ -1,0 +1,9 @@
+﻿namespace BattleOfTheMachines.Data.Models.ViewModels
+{
+    public class Leader
+    {
+        public string Name { get; set; }
+
+        public double Power { get; set; }
+    }
+}

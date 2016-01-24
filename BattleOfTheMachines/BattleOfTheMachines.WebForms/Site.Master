@@ -85,7 +85,7 @@
         PathDirection="RootToCurrent" 
         RenderCurrentNodeAsLink="false" 
         ShowToolTips="false"
-        CssClass="breadcrumb">
+        CssClass="breadcrumb sitemap">
         <NodeTemplate>
             <span>
                 <asp:HyperLink
