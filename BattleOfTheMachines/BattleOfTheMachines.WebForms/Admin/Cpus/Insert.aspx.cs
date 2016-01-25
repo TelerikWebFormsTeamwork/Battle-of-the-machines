@@ -1,50 +1,40 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-using System.Data.Entity;
-using BattleOfTheMachines.Data.Models;
-using BattleOfTheMachines.Data;
-
-namespace BattleOfTheMachines.WebForms.Admin.Cpus
+﻿namespace BattleOfTheMachines.WebForms.Admin.Cpus
 {
+    using Ninject;
+    using Services.Data.Contracts;
+    using System;
+
     public partial class Insert : System.Web.UI.Page
     {
-		protected BattleOfTheMachines.Data.BattleOfTheMachinesDbContext _db = new BattleOfTheMachines.Data.BattleOfTheMachinesDbContext();
-
-        protected void Page_Load(object sender, EventArgs e)
+        [Inject]
+        public ICpusService Cpus { get; set; }
+        
+        protected void AddCpu_Click(object sender, EventArgs e)
         {
-
-        }
-
-        // This is the Insert method to insert the entered Cpu item
-        // USAGE: <asp:FormView InsertMethod="InsertItem">
-        public void InsertItem()
-        {
-            using (_db)
+            if (cpuImage.HasFile)
             {
-                var item = new BattleOfTheMachines.Data.Models.Cpu();
-
-                TryUpdateModel(item);
-
-                if (ModelState.IsValid)
+                if (cpuImage.PostedFile.ContentType == "image/jpeg"
+                    || cpuImage.PostedFile.ContentType == "image/png")
                 {
-                    // Save changes
-                    _db.Processors.Add(item);
-                    _db.SaveChanges();
-
-                    Response.Redirect("Default");
+                    if (cpuImage.PostedFile.ContentLength < 3 * 102400)
+                    {
+                        this.Cpus.Add(model.Text, float.Parse(coreSpeed.Value), ushort.Parse(cores.Value), cpuImage.FileBytes);
+                        Server.Transfer("../Default.aspx", true);
+                    }
+                    else
+                    {
+                        ErrorMessage.Text = "Image must be less than 3 MB.";
+                    }
+                }
+                else
+                {
+                    ErrorMessage.Text = "Invalid image type.";
                 }
             }
-        }
-
-        protected void ItemCommand(object sender, FormViewCommandEventArgs e)
-        {
-            if (e.CommandName.Equals("Cancel", StringComparison.OrdinalIgnoreCase))
+            else
             {
-                Response.Redirect("Default");
+                this.Cpus.Add(model.Text, float.Parse(coreSpeed.Value), ushort.Parse(cores.Value), null);
+                Server.Transfer("../Default.aspx", true);
             }
         }
     }

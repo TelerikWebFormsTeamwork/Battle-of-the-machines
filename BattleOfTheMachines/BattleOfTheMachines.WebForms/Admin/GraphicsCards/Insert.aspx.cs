@@ -1,50 +1,40 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-using System.Data.Entity;
-using BattleOfTheMachines.Data.Models;
-using BattleOfTheMachines.Data;
-
-namespace BattleOfTheMachines.WebForms.Admin.GraphicsCards
+﻿namespace BattleOfTheMachines.WebForms.Admin.GraphicsCards
 {
+    using BattleOfTheMachines.Services.Data.Contracts;
+    using Ninject;
+    using System;
+
     public partial class Insert : System.Web.UI.Page
     {
-		protected BattleOfTheMachines.Data.BattleOfTheMachinesDbContext _db = new BattleOfTheMachines.Data.BattleOfTheMachinesDbContext();
+        [Inject]
+        public IGpusService Gpus { get; set; }
 
-        protected void Page_Load(object sender, EventArgs e)
+        protected void AddGpu_Click(object sender, EventArgs e)
         {
-
-        }
-
-        // This is the Insert method to insert the entered GraphicsCard item
-        // USAGE: <asp:FormView InsertMethod="InsertItem">
-        public void InsertItem()
-        {
-            using (_db)
+            if (gpuImage.HasFile)
             {
-                var item = new BattleOfTheMachines.Data.Models.GraphicsCard();
-
-                TryUpdateModel(item);
-
-                if (ModelState.IsValid)
+                if (gpuImage.PostedFile.ContentType == "image/jpeg"
+                    || gpuImage.PostedFile.ContentType == "image/png")
                 {
-                    // Save changes
-                    _db.GraphicsCards.Add(item);
-                    _db.SaveChanges();
-
-                    Response.Redirect("Default");
+                    if (gpuImage.PostedFile.ContentLength < 3 * 102400)
+                    {
+                        this.Gpus.Add(model.Text, float.Parse(coreSpeed.Value), ushort.Parse(cores.Value), gpuImage.FileBytes, int.Parse(vRAM.Value));
+                        Server.Transfer("../Default.aspx", true);
+                    }
+                    else
+                    {
+                        ErrorMessage.Text = "Image must be less than 3 MB.";
+                    }
+                }
+                else
+                {
+                    ErrorMessage.Text = "Invalid image type.";
                 }
             }
-        }
-
-        protected void ItemCommand(object sender, FormViewCommandEventArgs e)
-        {
-            if (e.CommandName.Equals("Cancel", StringComparison.OrdinalIgnoreCase))
+            else
             {
-                Response.Redirect("Default");
+                this.Gpus.Add(model.Text, float.Parse(coreSpeed.Value), ushort.Parse(cores.Value), null, int.Parse(vRAM.Value));
+                Server.Transfer("../Default.aspx", true);
             }
         }
     }

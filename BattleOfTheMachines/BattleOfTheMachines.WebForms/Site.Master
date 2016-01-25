@@ -59,13 +59,13 @@
                         <li class="dropdown">
                             <a href="bootstrap-elements.html" data-target="#" class="dropdown-toggle" data-toggle="dropdown">Admin panel <i class="material-icons">supervisor_account</i><b class="caret"></b></a>
                             <ul class="dropdown-menu">
-                                <li><a runat="server" href="~/Admin/Quests/AddQuest">Add new quest</a></li>
+                                <li><a runat="server" href="~/Admin/Quests/Insert">Add new quest</a></li>
                                 <li class="divider"></li>
                                 <li class="dropdown-header">Items</li>
-                                <li><a runat="server" href="~/Admin/Cpus/AddCpu">Add new CPU</a></li>
-                                <li><a runat="server" href="~/Admin/GraphicsCards/AddGpu">Add new GPU</a></li>
-                                <li><a runat="server" href="~/Admin/Networks/AddNetwork">Add new Network</a></li>
-                                <li><a runat="server" href="~/Admin/Rams/AddRam">Add new RAM</a></li>
+                                <li><a runat="server" href="~/Admin/Cpus/Insert">Add new CPU</a></li>
+                                <li><a runat="server" href="~/Admin/GraphicsCards/Insert">Add new GPU</a></li>
+                                <li><a runat="server" href="~/Admin/Networks/Insert">Add new Network</a></li>
+                                <li><a runat="server" href="~/Admin/Rams/Insert">Add new RAM</a></li>
                             </ul>
                         </li>
                     </ul>

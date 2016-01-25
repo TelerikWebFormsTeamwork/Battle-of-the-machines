@@ -214,36 +214,31 @@
     <Content Include="Account\ResetPasswordConfirmation.aspx" />
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
-    <Content Include="Admin\Cpus\AddCpu.aspx" />
-    <Content Include="Admin\GraphicsCards\AddGpu.aspx" />
-    <Content Include="Admin\Networks\AddNetwork.aspx" />
-    <Content Include="Admin\Quests\AddQuest.aspx" />
-    <Content Include="Admin\Rams\AddRam.aspx" />
+    <Content Include="Admin\Cpus\Insert.aspx" />
+    <Content Include="Admin\GraphicsCards\Insert.aspx" />
+    <Content Include="Admin\Networks\Insert.aspx" />
+    <Content Include="Admin\Quests\Insert.aspx" />
+    <Content Include="Admin\Rams\Insert.aspx" />
     <Content Include="Admin\Cpus\Default.aspx" />
     <Content Include="Admin\Cpus\Delete.aspx" />
     <Content Include="Admin\Cpus\Details.aspx" />
     <Content Include="Admin\Cpus\Edit.aspx" />
-    <Content Include="Admin\Cpus\Insert.aspx" />
     <Content Include="Admin\GraphicsCards\Default.aspx" />
     <Content Include="Admin\GraphicsCards\Delete.aspx" />
     <Content Include="Admin\GraphicsCards\Details.aspx" />
     <Content Include="Admin\GraphicsCards\Edit.aspx" />
-    <Content Include="Admin\GraphicsCards\Insert.aspx" />
     <Content Include="Admin\Networks\Default.aspx" />
     <Content Include="Admin\Networks\Delete.aspx" />
     <Content Include="Admin\Networks\Details.aspx" />
     <Content Include="Admin\Networks\Edit.aspx" />
-    <Content Include="Admin\Networks\Insert.aspx" />
     <Content Include="Admin\Quests\Default.aspx" />
     <Content Include="Admin\Quests\Delete.aspx" />
     <Content Include="Admin\Quests\Details.aspx" />
     <Content Include="Admin\Quests\Edit.aspx" />
-    <Content Include="Admin\Quests\Insert.aspx" />
     <Content Include="Admin\Rams\Default.aspx" />
     <Content Include="Admin\Rams\Delete.aspx" />
     <Content Include="Admin\Rams\Details.aspx" />
     <Content Include="Admin\Rams\Edit.aspx" />
-    <Content Include="Admin\Rams\Insert.aspx" />
     <Content Include="Admin\Users\Default.aspx" />
     <Content Include="Admin\Users\Delete.aspx" />
     <Content Include="Admin\Users\Details.aspx" />
@@ -449,40 +444,40 @@
     <Compile Include="Account\VerifyPhoneNumber.aspx.designer.cs">
       <DependentUpon>VerifyPhoneNumber.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\Cpus\AddCpu.aspx.cs">
-      <DependentUpon>AddCpu.aspx</DependentUpon>
+    <Compile Include="Admin\Cpus\Insert.aspx.cs">
+      <DependentUpon>Insert.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\Cpus\AddCpu.aspx.designer.cs">
-      <DependentUpon>AddCpu.aspx</DependentUpon>
+    <Compile Include="Admin\Cpus\Insert.aspx.designer.cs">
+      <DependentUpon>Insert.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\GraphicsCards\AddGpu.aspx.cs">
-      <DependentUpon>AddGpu.aspx</DependentUpon>
+    <Compile Include="Admin\GraphicsCards\Insert.aspx.cs">
+      <DependentUpon>Insert.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\GraphicsCards\AddGpu.aspx.designer.cs">
-      <DependentUpon>AddGpu.aspx</DependentUpon>
+    <Compile Include="Admin\GraphicsCards\Insert.aspx.designer.cs">
+      <DependentUpon>Insert.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\Networks\AddNetwork.aspx.cs">
-      <DependentUpon>AddNetwork.aspx</DependentUpon>
+    <Compile Include="Admin\Networks\Insert.aspx.cs">
+      <DependentUpon>Insert.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\Networks\AddNetwork.aspx.designer.cs">
-      <DependentUpon>AddNetwork.aspx</DependentUpon>
+    <Compile Include="Admin\Networks\Insert.aspx.designer.cs">
+      <DependentUpon>Insert.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\Quests\AddQuest.aspx.cs">
-      <DependentUpon>AddQuest.aspx</DependentUpon>
+    <Compile Include="Admin\Quests\Insert.aspx.cs">
+      <DependentUpon>Insert.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\Quests\AddQuest.aspx.designer.cs">
-      <DependentUpon>AddQuest.aspx</DependentUpon>
+    <Compile Include="Admin\Quests\Insert.aspx.designer.cs">
+      <DependentUpon>Insert.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\Rams\AddRam.aspx.cs">
-      <DependentUpon>AddRam.aspx</DependentUpon>
+    <Compile Include="Admin\Rams\Insert.aspx.cs">
+      <DependentUpon>Insert.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\Rams\AddRam.aspx.designer.cs">
-      <DependentUpon>AddRam.aspx</DependentUpon>
+    <Compile Include="Admin\Rams\Insert.aspx.designer.cs">
+      <DependentUpon>Insert.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\Cpus\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -512,13 +507,6 @@
     <Compile Include="Admin\Cpus\Edit.aspx.designer.cs">
       <DependentUpon>Edit.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\Cpus\Insert.aspx.cs">
-      <DependentUpon>Insert.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin\Cpus\Insert.aspx.designer.cs">
-      <DependentUpon>Insert.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Admin\GraphicsCards\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -546,13 +534,6 @@
     </Compile>
     <Compile Include="Admin\GraphicsCards\Edit.aspx.designer.cs">
       <DependentUpon>Edit.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\GraphicsCards\Insert.aspx.cs">
-      <DependentUpon>Insert.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin\GraphicsCards\Insert.aspx.designer.cs">
-      <DependentUpon>Insert.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\Networks\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -582,13 +563,6 @@
     <Compile Include="Admin\Networks\Edit.aspx.designer.cs">
       <DependentUpon>Edit.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\Networks\Insert.aspx.cs">
-      <DependentUpon>Insert.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin\Networks\Insert.aspx.designer.cs">
-      <DependentUpon>Insert.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Admin\Quests\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -617,13 +591,6 @@
     <Compile Include="Admin\Quests\Edit.aspx.designer.cs">
       <DependentUpon>Edit.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\Quests\Insert.aspx.cs">
-      <DependentUpon>Insert.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin\Quests\Insert.aspx.designer.cs">
-      <DependentUpon>Insert.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Admin\Rams\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -651,13 +618,6 @@
     </Compile>
     <Compile Include="Admin\Rams\Edit.aspx.designer.cs">
       <DependentUpon>Edit.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\Rams\Insert.aspx.cs">
-      <DependentUpon>Insert.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin\Rams\Insert.aspx.designer.cs">
-      <DependentUpon>Insert.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\Users\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
