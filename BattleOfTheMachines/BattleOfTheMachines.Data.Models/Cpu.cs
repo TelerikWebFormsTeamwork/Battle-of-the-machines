@@ -24,7 +24,7 @@
 
         [Required]
         [Range(1, 8)]
-        public ushort Cores { get; set; }
+        public int Cores { get; set; }
 
         [Required]
         public byte[] Image { get; set; }
