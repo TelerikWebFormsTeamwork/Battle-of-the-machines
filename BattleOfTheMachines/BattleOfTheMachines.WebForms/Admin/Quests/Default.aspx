@@ -30,9 +30,6 @@
 								<asp:LinkButton Text="DurationInMinutes" CommandName="Sort" CommandArgument="DurationInMinutes" runat="Server" />
 							</th>
                             <th>
-								<asp:LinkButton Text="Image" CommandName="Sort" CommandArgument="Image" runat="Server" />
-							</th>
-                            <th>
 								<asp:LinkButton Text="Specialization" CommandName="Sort" CommandArgument="Specialization" runat="Server" />
 							</th>
                             <th>&nbsp;</th>
@@ -63,9 +60,6 @@
 							</td>
 							<td>
 								<asp:DynamicControl runat="server" DataField="DurationInMinutes" ID="DurationInMinutes" Mode="ReadOnly" />
-							</td>
-							<td>
-								<asp:DynamicControl runat="server" DataField="Image" ID="Image" Mode="ReadOnly" />
 							</td>
 							<td>
 								<asp:DynamicControl runat="server" DataField="Specialization" ID="Specialization" Mode="ReadOnly" />

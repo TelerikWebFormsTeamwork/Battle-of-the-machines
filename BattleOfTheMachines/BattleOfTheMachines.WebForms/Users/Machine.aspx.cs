@@ -6,6 +6,7 @@
     using BattleOfTheMachines.Data;
 
     using Microsoft.AspNet.Identity;
+    using Helpers;
 
     public partial class Machine : System.Web.UI.Page
     {
@@ -14,15 +15,10 @@
             var db = new BattleOfTheMachinesDbContext();
 
             var machine = db.Machines.ToList().First(x => x.OwnerId == this.User.Identity.GetUserId());
-            this.processor.ImageUrl = this.GetComponentUrl(machine.Processor.Image);
-            this.network.ImageUrl = this.GetComponentUrl(machine.Network.Image);
-            this.ram.ImageUrl = this.GetComponentUrl(machine.Ram.Image);
-            this.graphics.ImageUrl = this.GetComponentUrl(machine.GraphicsCard.Image);
-        }
-
-        private string GetComponentUrl(byte[] image)
-        {
-            return "data:image/jpeg;base64," + Convert.ToBase64String(image);
+            this.processor.ImageUrl = ImageHelper.GetComponentUrl(machine.Processor.Image);
+            this.network.ImageUrl = ImageHelper.GetComponentUrl(machine.Network.Image);
+            this.ram.ImageUrl = ImageHelper.GetComponentUrl(machine.Ram.Image);
+            this.graphics.ImageUrl = ImageHelper.GetComponentUrl(machine.GraphicsCard.Image);
         }
     }
 }

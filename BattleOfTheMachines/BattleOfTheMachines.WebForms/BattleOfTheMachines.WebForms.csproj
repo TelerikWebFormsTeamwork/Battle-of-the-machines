@@ -812,6 +812,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helpers\IdentityHelper.cs" />
+    <Compile Include="Helpers\ImageHelper.cs" />
     <Compile Include="Leaderboard.aspx.cs">
       <DependentUpon>Leaderboard.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

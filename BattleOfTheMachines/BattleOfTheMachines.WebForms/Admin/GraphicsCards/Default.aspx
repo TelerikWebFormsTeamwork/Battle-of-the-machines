@@ -27,9 +27,6 @@
 								<asp:LinkButton Text="CoreSpeed" CommandName="Sort" CommandArgument="CoreSpeed" runat="Server" />
 							</th>
                             <th>
-								<asp:LinkButton Text="Image" CommandName="Sort" CommandArgument="Image" runat="Server" />
-							</th>
-                            <th>
 								<asp:LinkButton Text="VideoMemory" CommandName="Sort" CommandArgument="VideoMemory" runat="Server" />
 							</th>
                             <th>&nbsp;</th>
@@ -57,9 +54,6 @@
 							</td>
 							<td>
 								<asp:DynamicControl runat="server" DataField="CoreSpeed" ID="CoreSpeed" Mode="ReadOnly" />
-							</td>
-							<td>
-								<asp:DynamicControl runat="server" DataField="Image" ID="Image" Mode="ReadOnly" />
 							</td>
 							<td>
 								<asp:DynamicControl runat="server" DataField="VideoMemory" ID="VideoMemory" Mode="ReadOnly" />

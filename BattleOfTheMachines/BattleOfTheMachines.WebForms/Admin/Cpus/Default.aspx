@@ -29,9 +29,6 @@
                             <th>
 								<asp:LinkButton Text="Cores" CommandName="Sort" CommandArgument="Cores" runat="Server" />
 							</th>
-                            <th>
-								<asp:LinkButton Text="Image" CommandName="Sort" CommandArgument="Image" runat="Server" />
-							</th>
                             <th>&nbsp;</th>
                         </tr>
                     </thead>
@@ -60,9 +57,6 @@
 							</td>
 							<td>
 								<asp:DynamicControl runat="server" DataField="Cores" ID="Cores" Mode="ReadOnly" />
-							</td>
-							<td>
-								<asp:DynamicControl runat="server" DataField="Image" ID="Image" Mode="ReadOnly" />
 							</td>
                     <td>
 					    <asp:HyperLink runat="server" NavigateUrl='<%# FriendlyUrl.Href("~/Admin/Cpus/Details", Item.Id) %>' Text="Details" /> | 

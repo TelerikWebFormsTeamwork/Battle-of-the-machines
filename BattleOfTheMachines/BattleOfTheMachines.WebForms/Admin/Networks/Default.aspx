@@ -26,9 +26,6 @@
                             <th>
 								<asp:LinkButton Text="Speed" CommandName="Sort" CommandArgument="Speed" runat="Server" />
 							</th>
-                            <th>
-								<asp:LinkButton Text="Image" CommandName="Sort" CommandArgument="Image" runat="Server" />
-							</th>
                             <th>&nbsp;</th>
                         </tr>
                     </thead>
@@ -54,9 +51,6 @@
 							</td>
 							<td>
 								<asp:DynamicControl runat="server" DataField="Speed" ID="Speed" Mode="ReadOnly" />
-							</td>
-							<td>
-								<asp:DynamicControl runat="server" DataField="Image" ID="Image" Mode="ReadOnly" />
 							</td>
                     <td>
 					    <asp:HyperLink runat="server" NavigateUrl='<%# FriendlyUrl.Href("~/Admin/Networks/Details", Item.Id) %>' Text="Details" /> | 
