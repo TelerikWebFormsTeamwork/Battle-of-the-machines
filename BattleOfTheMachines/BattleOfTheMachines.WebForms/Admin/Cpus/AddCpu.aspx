@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Add Ram" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="AddRam.aspx.cs" Inherits="BattleOfTheMachines.WebForms.Admin.AddRam" %>
+﻿<%@ Page Title="Add cpu" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="AddCpu.aspx.cs" Inherits="BattleOfTheMachines.WebForms.Admin.Cpus.AddCpu" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <h2><%: Title %>.</h2>
@@ -11,7 +11,7 @@
             <div class="well bs-component">
                 <div class="form-horizontal">
                     <fieldset>
-                        <legend>Create a new RAM component</legend>
+                        <legend>Create a new CPU component</legend>
                         <asp:ValidationSummary runat="server" CssClass="text-danger" />
                         <div class="form-group">
                             <asp:Label runat="server" AssociatedControlID="model" CssClass="col-md-2 control-label">Model</asp:Label>
@@ -22,30 +22,30 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="memory" class="col-md-2 control-label">Memory</label>
+                            <label for="cores" class="col-md-2 control-label">Cores</label>
                             <div class="col-md-10">
-                                <input type="number" class="form-control" id="memory" runat="server" min="0" required>
+                                <input type="number" class="form-control" id="cores" runat="server" min="0" required>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="memorySpeed" class="col-md-2 control-label">Memory speed</label>
+                            <label for="coreSpeed" class="col-md-2 control-label">Core speed</label>
                             <div class="col-md-10">
-                                <input type="number" class="form-control" id="memorySpeed" runat="server" step="any" min="0" required>
+                                <input type="number" class="form-control" id="coreSpeed" runat="server" step="any" min="0" required>
                             </div>
                         </div>
                         <div class="form-group">
-                            <asp:Label runat="server" AssociatedControlID="ramImage" CssClass="col-md-2 control-label">Image</asp:Label>
+                            <asp:Label runat="server" AssociatedControlID="cpuImage" CssClass="col-md-2 control-label">Image</asp:Label>
                             <div class="col-md-10">
-                                <input type="text" readonly="" class="form-control" placeholder="Browse...">
-                                <asp:FileUpload runat="server" ID="ramImage"/>
+                                <input type="text" readonly="" class="form-control" placeholder="Browse..." required>
+                                <asp:FileUpload runat="server" ID="cpuImage"/>
                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator" runat="server"
-                                    ControlToValidate="ramImage" ErrorMessage="File Required!">
+                                    ControlToValidate="cpuImage" ErrorMessage="File Required!">
                                 </asp:RequiredFieldValidator>
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="col-md-10 col-md-offset-2">
-                                <asp:Button Text="Add" runat="server" OnClick="AddRam_Click" CssClass="btn btn-primary"/>
+                                <asp:Button Text="Add" runat="server" OnClick="AddCpu_Click" CssClass="btn btn-primary"/>
                             </div>
                         </div>
                     </fieldset>

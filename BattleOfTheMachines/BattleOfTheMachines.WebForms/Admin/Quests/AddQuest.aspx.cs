@@ -1,4 +1,4 @@
-﻿namespace BattleOfTheMachines.WebForms.Admin
+﻿namespace BattleOfTheMachines.WebForms.Admin.Quests
 {
     using Data.Models.Enums;
     using Ninject;

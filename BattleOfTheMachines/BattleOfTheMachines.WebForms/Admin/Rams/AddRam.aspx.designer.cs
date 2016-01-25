@@ -7,10 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace BattleOfTheMachines.WebForms.Admin {
+namespace BattleOfTheMachines.WebForms.Admin.Rams
+{
     
     
-    public partial class AddNetwork {
+    public partial class AddRam {
         
         /// <summary>
         /// ErrorMessage control.
@@ -22,31 +23,40 @@ namespace BattleOfTheMachines.WebForms.Admin {
         protected global::System.Web.UI.WebControls.Literal ErrorMessage;
         
         /// <summary>
-        /// type control.
+        /// model control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox type;
+        protected global::System.Web.UI.WebControls.TextBox model;
         
         /// <summary>
-        /// speed control.
+        /// memory control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl speed;
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl memory;
         
         /// <summary>
-        /// networkImage control.
+        /// memorySpeed control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload networkImage;
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl memorySpeed;
+        
+        /// <summary>
+        /// ramImage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FileUpload ramImage;
         
         /// <summary>
         /// RequiredFieldValidator control.

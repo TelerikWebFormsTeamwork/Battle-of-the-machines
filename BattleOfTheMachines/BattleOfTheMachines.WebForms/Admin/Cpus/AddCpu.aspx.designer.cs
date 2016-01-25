@@ -7,10 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace BattleOfTheMachines.WebForms.Admin {
+namespace BattleOfTheMachines.WebForms.Admin.Cpus
+{
     
     
-    public partial class AddQuest {
+    public partial class AddCpu {
         
         /// <summary>
         /// ErrorMessage control.
@@ -22,40 +23,40 @@ namespace BattleOfTheMachines.WebForms.Admin {
         protected global::System.Web.UI.WebControls.Literal ErrorMessage;
         
         /// <summary>
-        /// name control.
+        /// model control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox name;
+        protected global::System.Web.UI.WebControls.TextBox model;
         
         /// <summary>
-        /// description control.
+        /// cores control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea description;
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl cores;
         
         /// <summary>
-        /// duration control.
+        /// coreSpeed control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl duration;
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl coreSpeed;
         
         /// <summary>
-        /// questImage control.
+        /// cpuImage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload questImage;
+        protected global::System.Web.UI.WebControls.FileUpload cpuImage;
         
         /// <summary>
         /// RequiredFieldValidator control.
@@ -65,14 +66,5 @@ namespace BattleOfTheMachines.WebForms.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator;
-        
-        /// <summary>
-        /// partType control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList partType;
     }
 }

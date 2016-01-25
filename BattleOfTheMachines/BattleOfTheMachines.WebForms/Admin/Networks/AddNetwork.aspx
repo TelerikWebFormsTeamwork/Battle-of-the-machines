@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Add Network" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="AddNetwork.aspx.cs" Inherits="BattleOfTheMachines.WebForms.Admin.AddNetwork" %>
+﻿<%@ Page Title="Add Network" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="AddNetwork.aspx.cs" Inherits="BattleOfTheMachines.WebForms.Admin.Networks.AddNetwork" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <h2><%: Title %>.</h2>

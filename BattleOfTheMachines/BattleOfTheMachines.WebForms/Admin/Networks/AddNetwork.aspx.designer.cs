@@ -7,10 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace BattleOfTheMachines.WebForms.Admin {
+namespace BattleOfTheMachines.WebForms.Admin.Networks
+{
     
     
-    public partial class AddCpu {
+    public partial class AddNetwork {
         
         /// <summary>
         /// ErrorMessage control.
@@ -22,40 +23,31 @@ namespace BattleOfTheMachines.WebForms.Admin {
         protected global::System.Web.UI.WebControls.Literal ErrorMessage;
         
         /// <summary>
-        /// model control.
+        /// type control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox model;
+        protected global::System.Web.UI.WebControls.TextBox type;
         
         /// <summary>
-        /// cores control.
+        /// speed control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl cores;
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl speed;
         
         /// <summary>
-        /// coreSpeed control.
+        /// networkImage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl coreSpeed;
-        
-        /// <summary>
-        /// cpuImage control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload cpuImage;
+        protected global::System.Web.UI.WebControls.FileUpload networkImage;
         
         /// <summary>
         /// RequiredFieldValidator control.

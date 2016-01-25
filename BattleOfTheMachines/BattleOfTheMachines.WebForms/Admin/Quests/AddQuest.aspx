@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Add quest" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="AddQuest.aspx.cs" Inherits="BattleOfTheMachines.WebForms.Admin.AddQuest" %>
+﻿<%@ Page Title="Add quest" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="AddQuest.aspx.cs" Inherits="BattleOfTheMachines.WebForms.Admin.Quests.AddQuest" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <h2><%: Title %>.</h2>

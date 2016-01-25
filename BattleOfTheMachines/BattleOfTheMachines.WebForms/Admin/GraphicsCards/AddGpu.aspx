@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Add Graphics Card" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="AddGpu.aspx.cs" Inherits="BattleOfTheMachines.WebForms.Admin.AddGpu" %>
+﻿<%@ Page Title="Add Graphics Card" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="AddGpu.aspx.cs" Inherits="BattleOfTheMachines.WebForms.Admin.GraphicsCards.AddGpu" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <h2><%: Title %>.</h2>

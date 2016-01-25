@@ -214,11 +214,11 @@
     <Content Include="Account\ResetPasswordConfirmation.aspx" />
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
-    <Content Include="Admin\AddCpu.aspx" />
-    <Content Include="Admin\AddGpu.aspx" />
-    <Content Include="Admin\AddNetwork.aspx" />
-    <Content Include="Admin\AddQuest.aspx" />
-    <Content Include="Admin\AddRam.aspx" />
+    <Content Include="Admin\Cpus\AddCpu.aspx" />
+    <Content Include="Admin\GraphicsCards\AddGpu.aspx" />
+    <Content Include="Admin\Networks\AddNetwork.aspx" />
+    <Content Include="Admin\Quests\AddQuest.aspx" />
+    <Content Include="Admin\Rams\AddRam.aspx" />
     <Content Include="Admin\Cpus\Default.aspx" />
     <Content Include="Admin\Cpus\Delete.aspx" />
     <Content Include="Admin\Cpus\Details.aspx" />
@@ -449,39 +449,39 @@
     <Compile Include="Account\VerifyPhoneNumber.aspx.designer.cs">
       <DependentUpon>VerifyPhoneNumber.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\AddCpu.aspx.cs">
+    <Compile Include="Admin\Cpus\AddCpu.aspx.cs">
       <DependentUpon>AddCpu.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\AddCpu.aspx.designer.cs">
+    <Compile Include="Admin\Cpus\AddCpu.aspx.designer.cs">
       <DependentUpon>AddCpu.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\AddGpu.aspx.cs">
+    <Compile Include="Admin\GraphicsCards\AddGpu.aspx.cs">
       <DependentUpon>AddGpu.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\AddGpu.aspx.designer.cs">
+    <Compile Include="Admin\GraphicsCards\AddGpu.aspx.designer.cs">
       <DependentUpon>AddGpu.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\AddNetwork.aspx.cs">
+    <Compile Include="Admin\Networks\AddNetwork.aspx.cs">
       <DependentUpon>AddNetwork.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\AddNetwork.aspx.designer.cs">
+    <Compile Include="Admin\Networks\AddNetwork.aspx.designer.cs">
       <DependentUpon>AddNetwork.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\AddQuest.aspx.cs">
+    <Compile Include="Admin\Quests\AddQuest.aspx.cs">
       <DependentUpon>AddQuest.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\AddQuest.aspx.designer.cs">
+    <Compile Include="Admin\Quests\AddQuest.aspx.designer.cs">
       <DependentUpon>AddQuest.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\AddRam.aspx.cs">
+    <Compile Include="Admin\Rams\AddRam.aspx.cs">
       <DependentUpon>AddRam.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\AddRam.aspx.designer.cs">
+    <Compile Include="Admin\Rams\AddRam.aspx.designer.cs">
       <DependentUpon>AddRam.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\Cpus\Default.aspx.cs">

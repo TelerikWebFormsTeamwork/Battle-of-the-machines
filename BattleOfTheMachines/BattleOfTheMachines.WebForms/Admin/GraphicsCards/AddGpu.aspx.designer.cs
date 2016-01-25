@@ -7,7 +7,8 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace BattleOfTheMachines.WebForms.Admin {
+namespace BattleOfTheMachines.WebForms.Admin.GraphicsCards
+{
     
     
     public partial class AddGpu {

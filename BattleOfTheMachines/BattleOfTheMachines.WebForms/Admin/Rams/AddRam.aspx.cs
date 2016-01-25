@@ -1,4 +1,4 @@
-﻿namespace BattleOfTheMachines.WebForms.Admin
+﻿namespace BattleOfTheMachines.WebForms.Admin.Rams
 {
     using Ninject;
     using Services.Data.Contracts;

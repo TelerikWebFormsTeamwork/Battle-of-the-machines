@@ -1,4 +1,4 @@
-﻿namespace BattleOfTheMachines.WebForms.Admin
+﻿namespace BattleOfTheMachines.WebForms.Admin.GraphicsCards
 {
     using BattleOfTheMachines.Services.Data.Contracts;
     using Ninject;
