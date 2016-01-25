@@ -32,6 +32,9 @@
                             <div class="col-md-10">
                                 <input type="text" readonly="" class="form-control" placeholder="Browse...">
                                 <asp:FileUpload runat="server" ID="networkImage"/>
+                                <asp:RequiredFieldValidator ID="RequiredFieldValidator" runat="server"
+                                    ControlToValidate="networkImage" ErrorMessage="File Required!">
+                                </asp:RequiredFieldValidator>
                             </div>
                         </div>
                         <div class="form-group">

@@ -36,8 +36,11 @@
                         <div class="form-group">
                             <asp:Label runat="server" AssociatedControlID="cpuImage" CssClass="col-md-2 control-label">Image</asp:Label>
                             <div class="col-md-10">
-                                <input type="text" readonly="" class="form-control" placeholder="Browse...">
+                                <input type="text" readonly="" class="form-control" placeholder="Browse..." required>
                                 <asp:FileUpload runat="server" ID="cpuImage"/>
+                                <asp:RequiredFieldValidator ID="RequiredFieldValidator" runat="server"
+                                    ControlToValidate="cpuImage" ErrorMessage="File Required!">
+                                </asp:RequiredFieldValidator>
                             </div>
                         </div>
                         <div class="form-group">

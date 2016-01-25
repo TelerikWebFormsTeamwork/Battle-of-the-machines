@@ -49,6 +49,15 @@ namespace BattleOfTheMachines.WebForms.Admin {
         protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl coreSpeed;
         
         /// <summary>
+        /// vRAM control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl vRAM;
+        
+        /// <summary>
         /// gpuImage control.
         /// </summary>
         /// <remarks>
@@ -58,12 +67,12 @@ namespace BattleOfTheMachines.WebForms.Admin {
         protected global::System.Web.UI.WebControls.FileUpload gpuImage;
         
         /// <summary>
-        /// vRAM control.
+        /// RequiredFieldValidator control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl vRAM;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator;
     }
 }

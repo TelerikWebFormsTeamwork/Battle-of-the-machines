@@ -38,6 +38,9 @@
                             <div class="col-md-10">
                                 <input type="text" readonly="" class="form-control" placeholder="Browse...">
                                 <asp:FileUpload runat="server" ID="ramImage"/>
+                                <asp:RequiredFieldValidator ID="RequiredFieldValidator" runat="server"
+                                    ControlToValidate="ramImage" ErrorMessage="File Required!">
+                                </asp:RequiredFieldValidator>
                             </div>
                         </div>
                         <div class="form-group">
