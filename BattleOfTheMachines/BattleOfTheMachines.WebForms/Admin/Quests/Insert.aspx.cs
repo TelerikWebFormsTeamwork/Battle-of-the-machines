@@ -30,7 +30,7 @@
                     if (questImage.PostedFile.ContentLength < 3 * 102400)
                     {
                         this.Quests.Add(name.Text, description.InnerText, float.Parse(duration.Value), questImage.FileBytes, selectedPartType);
-                        Server.Transfer("../Default.aspx", true);
+                        Server.Transfer("Default.aspx", true);
                     }
                     else
                     {

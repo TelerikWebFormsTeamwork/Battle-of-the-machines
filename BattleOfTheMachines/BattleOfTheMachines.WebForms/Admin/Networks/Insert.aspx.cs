@@ -20,7 +20,7 @@
                     if (networkImage.PostedFile.ContentLength < 3 * 102400)
                     {
                         this.Networks.Add(type.Text, int.Parse(speed.Value), networkImage.FileBytes);
-                        Server.Transfer("../Default.aspx", true);
+                        Server.Transfer("Default.aspx", true);
                     }
                     else
                     {

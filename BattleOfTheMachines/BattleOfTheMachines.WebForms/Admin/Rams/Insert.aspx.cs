@@ -19,7 +19,7 @@
                     if (ramImage.PostedFile.ContentLength < 3 * 102400)
                     {
                         this.Rams.Add(model.Text, float.Parse(memorySpeed.Value), ramImage.FileBytes, int.Parse(memory.Value));
-                        Server.Transfer("../Default.aspx", true);
+                        Server.Transfer("Default.aspx", true);
                     }
                     else
                     {

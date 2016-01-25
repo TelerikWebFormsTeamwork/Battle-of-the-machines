@@ -19,7 +19,7 @@
                     if (cpuImage.PostedFile.ContentLength < 3 * 102400)
                     {
                         this.Cpus.Add(model.Text, float.Parse(coreSpeed.Value), ushort.Parse(cores.Value), cpuImage.FileBytes);
-                        Server.Transfer("../Default.aspx", true);
+                        Server.Transfer("Default.aspx", true);
                     }
                     else
                     {
