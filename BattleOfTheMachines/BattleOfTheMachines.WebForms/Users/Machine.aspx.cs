@@ -9,15 +9,24 @@
 
     public partial class Machine : System.Web.UI.Page
     {
+        protected bool HasMachine;
+
         protected void Page_Load(object sender, EventArgs e)
         {
             var db = new BattleOfTheMachinesDbContext();
+            var machine = db.Machines.ToList().FirstOrDefault(x => x.OwnerId == this.User.Identity.GetUserId());
 
-            var machine = db.Machines.ToList().First(x => x.OwnerId == this.User.Identity.GetUserId());
-            this.processor.ImageUrl = this.GetComponentUrl(machine.Processor.Image);
-            this.network.ImageUrl = this.GetComponentUrl(machine.Network.Image);
-            this.ram.ImageUrl = this.GetComponentUrl(machine.Ram.Image);
-            this.graphics.ImageUrl = this.GetComponentUrl(machine.GraphicsCard.Image);
+            this.HasMachine = false;
+
+            if (machine != null)
+            {
+                this.HasMachine = true;
+                
+                this.processor.ImageUrl = this.GetComponentUrl(machine.Processor.Image);
+                this.network.ImageUrl = this.GetComponentUrl(machine.Network.Image);
+                this.ram.ImageUrl = this.GetComponentUrl(machine.Ram.Image);
+                this.graphics.ImageUrl = this.GetComponentUrl(machine.GraphicsCard.Image);
+            }
         }
 
         private string GetComponentUrl(byte[] image)
