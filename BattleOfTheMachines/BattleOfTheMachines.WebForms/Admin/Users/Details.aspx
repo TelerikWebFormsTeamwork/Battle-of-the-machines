@@ -63,46 +63,6 @@
 							</div>
 							<div class="row">
 								<div class="col-sm-2 text-right">
-									<strong>PhoneNumberConfirmed</strong>
-								</div>
-								<div class="col-sm-4">
-									<asp:DynamicControl runat="server" DataField="PhoneNumberConfirmed" ID="PhoneNumberConfirmed" Mode="ReadOnly" />
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-sm-2 text-right">
-									<strong>TwoFactorEnabled</strong>
-								</div>
-								<div class="col-sm-4">
-									<asp:DynamicControl runat="server" DataField="TwoFactorEnabled" ID="TwoFactorEnabled" Mode="ReadOnly" />
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-sm-2 text-right">
-									<strong>LockoutEndDateUtc</strong>
-								</div>
-								<div class="col-sm-4">
-									<asp:DynamicControl runat="server" DataField="LockoutEndDateUtc" ID="LockoutEndDateUtc" Mode="ReadOnly" />
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-sm-2 text-right">
-									<strong>LockoutEnabled</strong>
-								</div>
-								<div class="col-sm-4">
-									<asp:DynamicControl runat="server" DataField="LockoutEnabled" ID="LockoutEnabled" Mode="ReadOnly" />
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-sm-2 text-right">
-									<strong>AccessFailedCount</strong>
-								</div>
-								<div class="col-sm-4">
-									<asp:DynamicControl runat="server" DataField="AccessFailedCount" ID="AccessFailedCount" Mode="ReadOnly" />
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-sm-2 text-right">
 									<strong>UserName</strong>
 								</div>
 								<div class="col-sm-4">

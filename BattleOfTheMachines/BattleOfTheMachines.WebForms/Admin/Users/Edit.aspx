@@ -15,15 +15,9 @@
 					<asp:ValidationSummary runat="server" CssClass="alert alert-danger"  />                 
 						    <asp:DynamicControl Mode="Edit" DataField="Id" runat="server" />
 						    <asp:DynamicControl Mode="Edit" DataField="Email" runat="server" />
-						    <asp:DynamicControl Mode="Edit" DataField="EmailConfirmed" runat="server" />
 						    <asp:DynamicControl Mode="Edit" DataField="PasswordHash" runat="server" />
 						    <asp:DynamicControl Mode="Edit" DataField="SecurityStamp" runat="server" />
 						    <asp:DynamicControl Mode="Edit" DataField="PhoneNumber" runat="server" />
-						    <asp:DynamicControl Mode="Edit" DataField="PhoneNumberConfirmed" runat="server" />
-						    <asp:DynamicControl Mode="Edit" DataField="TwoFactorEnabled" runat="server" />
-						    <asp:DynamicControl Mode="Edit" DataField="LockoutEndDateUtc" runat="server" />
-						    <asp:DynamicControl Mode="Edit" DataField="LockoutEnabled" runat="server" />
-						    <asp:DynamicControl Mode="Edit" DataField="AccessFailedCount" runat="server" />
 						    <asp:DynamicControl Mode="Edit" DataField="UserName" runat="server" />
                     <div class="form-group">
                         <div class="col-sm-offset-2 col-sm-10">
