@@ -1,4 +1,4 @@
-﻿<%@ Page Title="NetworkDelete" Language="C#" MasterPageFile="~/Site.Master" CodeBehind="Delete.aspx.cs" Inherits="BattleOfTheMachines.WebForms.Admin.Networks.Delete" %>
+﻿<%@ Page Title="NetworkDelete" Language="C#" MasterPageFile="~/Admin/Admin.master" CodeBehind="Delete.aspx.cs" Inherits="BattleOfTheMachines.WebForms.Admin.Networks.Delete" %>
 <asp:Content runat="server" ContentPlaceHolderID="MainContent">
     <div>
 		<p>&nbsp;</p>
@@ -35,14 +35,6 @@
 								</div>
 								<div class="col-sm-4">
 									<asp:DynamicControl runat="server" DataField="Speed" ID="Speed" Mode="ReadOnly" />
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-sm-2 text-right">
-									<strong>Image</strong>
-								</div>
-								<div class="col-sm-4">
-									<asp:DynamicControl runat="server" DataField="Image" ID="Image" Mode="ReadOnly" />
 								</div>
 							</div>
                  	<div class="row">

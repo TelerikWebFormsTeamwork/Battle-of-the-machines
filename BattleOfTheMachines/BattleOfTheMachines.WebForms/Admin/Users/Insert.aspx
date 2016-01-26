@@ -1,35 +1,42 @@
-﻿<%@ Page Title="UserInsert" Language="C#" MasterPageFile="~/Site.Master" CodeBehind="Insert.aspx.cs" Inherits="BattleOfTheMachines.WebForms.Admin.Users.Insert" %>
-<asp:Content runat="server" ContentPlaceHolderID="MainContent">
-    <div>
-		<p>&nbsp;</p>
-        <asp:FormView runat="server"
-            ItemType="BattleOfTheMachines.Data.Models.User" DefaultMode="Insert"
-            InsertItemPosition="FirstItem" InsertMethod="InsertItem"
-            OnItemCommand="ItemCommand" RenderOuterTable="false">
-            <InsertItemTemplate>
-                <fieldset class="form-horizontal">
-				<legend>Insert User</legend>
-		        <asp:ValidationSummary runat="server" CssClass="alert alert-danger" />
-						    <asp:DynamicControl Mode="Insert" DataField="Id" runat="server" />
-						    <asp:DynamicControl Mode="Insert" DataField="Email" runat="server" />
-						    <asp:DynamicControl Mode="Insert" DataField="EmailConfirmed" runat="server" />
-						    <asp:DynamicControl Mode="Insert" DataField="PasswordHash" runat="server" />
-						    <asp:DynamicControl Mode="Insert" DataField="SecurityStamp" runat="server" />
-						    <asp:DynamicControl Mode="Insert" DataField="PhoneNumber" runat="server" />
-						    <asp:DynamicControl Mode="Insert" DataField="PhoneNumberConfirmed" runat="server" />
-						    <asp:DynamicControl Mode="Insert" DataField="TwoFactorEnabled" runat="server" />
-						    <asp:DynamicControl Mode="Insert" DataField="LockoutEndDateUtc" runat="server" />
-						    <asp:DynamicControl Mode="Insert" DataField="LockoutEnabled" runat="server" />
-						    <asp:DynamicControl Mode="Insert" DataField="AccessFailedCount" runat="server" />
-						    <asp:DynamicControl Mode="Insert" DataField="UserName" runat="server" />
-                    <div class="form-group">
-                        <div class="col-sm-offset-2 col-sm-10">
-                            <asp:Button runat="server" ID="InsertButton" CommandName="Insert" Text="Insert" CssClass="btn btn-primary" />
-                            <asp:Button runat="server" ID="CancelButton" CommandName="Cancel" Text="Cancel" CausesValidation="false" CssClass="btn btn-default" />
+﻿<%@ Page Title="Add user" Language="C#" MasterPageFile="~/Admin/Admin.master" AutoEventWireup="true" CodeBehind="Insert.aspx.cs" Inherits="BattleOfTheMachines.WebForms.Admin.Users.Insert" %>
+
+<asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
+    <h2><%: Title %>.</h2>
+    <p class="text-danger">
+        <asp:Literal runat="server" ID="ErrorMessage" />
+    </p>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="well bs-component">
+                <div class="form-horizontal">
+                    <fieldset>
+                        <legend>Create a new user</legend>
+                        <asp:ValidationSummary runat="server" CssClass="text-danger" />
+                        <div class="form-group">
+                            <asp:Label runat="server" AssociatedControlID="Email" CssClass="col-md-2 control-label">Email</asp:Label>
+                            <div class="col-md-10">
+                                <asp:TextBox runat="server" ID="Email" CssClass="form-control" TextMode="Email" />
+                                <asp:RequiredFieldValidator runat="server" ControlToValidate="Email"
+                                    CssClass="text-danger" ErrorMessage="The email field is required." />
+                            </div>
                         </div>
-					</div>
-                </fieldset>
-            </InsertItemTemplate>
-        </asp:FormView>
+                        <div class="form-group">
+                            <asp:Label runat="server" AssociatedControlID="Password" CssClass="col-md-2 control-label">Password</asp:Label>
+                            <div class="col-md-10">
+                                <asp:TextBox runat="server" ID="Password" TextMode="Password" CssClass="form-control" />
+                                <asp:RequiredFieldValidator runat="server" ControlToValidate="Password"
+                                    CssClass="text-danger" ErrorMessage="The password field is required." />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-10 col-md-offset-2">
+                                <asp:Button Text="Add" runat="server" OnClick="AddUser_Click" CssClass="btn btn-primary" />
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+        </div>
     </div>
 </asp:Content>

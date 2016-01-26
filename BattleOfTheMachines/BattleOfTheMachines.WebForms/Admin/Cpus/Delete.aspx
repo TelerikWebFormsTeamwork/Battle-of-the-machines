@@ -1,4 +1,4 @@
-﻿<%@ Page Title="CpuDelete" Language="C#" MasterPageFile="~/Site.Master" CodeBehind="Delete.aspx.cs" Inherits="BattleOfTheMachines.WebForms.Admin.Cpus.Delete" %>
+﻿<%@ Page Title="CpuDelete" Language="C#" MasterPageFile="~/Admin/Admin.master" CodeBehind="Delete.aspx.cs" Inherits="BattleOfTheMachines.WebForms.Admin.Cpus.Delete" %>
 <asp:Content runat="server" ContentPlaceHolderID="MainContent">
     <div>
 		<p>&nbsp;</p>
@@ -43,14 +43,6 @@
 								</div>
 								<div class="col-sm-4">
 									<asp:DynamicControl runat="server" DataField="Cores" ID="Cores" Mode="ReadOnly" />
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-sm-2 text-right">
-									<strong>Image</strong>
-								</div>
-								<div class="col-sm-4">
-									<asp:DynamicControl runat="server" DataField="Image" ID="Image" Mode="ReadOnly" />
 								</div>
 							</div>
                  	<div class="row">

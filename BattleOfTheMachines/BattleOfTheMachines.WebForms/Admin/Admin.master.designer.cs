@@ -7,18 +7,18 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace BattleOfTheMachines.WebForms.Admin.Users {
+namespace BattleOfTheMachines.WebForms.Admin {
     
     
-    public partial class Default {
+    public partial class Admin {
         
         /// <summary>
-        /// ListView1 control.
+        /// MainContent control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ListView ListView1;
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder MainContent;
     }
 }
