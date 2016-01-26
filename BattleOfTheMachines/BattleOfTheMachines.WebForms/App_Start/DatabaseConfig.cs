@@ -1,5 +1,7 @@
 ﻿namespace BattleOfTheMachines.WebForms.App_Start
 {
+    using System;
+
     using BattleOfTheMachines.Data;
     using System.Data.Entity;
     using BattleOfTheMachines.Data.Migrations;
@@ -9,7 +11,14 @@
         public static void Initialize()
         {
             Database.SetInitializer(new MigrateDatabaseToLatestVersion<BattleOfTheMachinesDbContext, Configuration>());
-            BattleOfTheMachinesDbContext.Create().Database.Initialize(true);
+            try
+            {
+                BattleOfTheMachinesDbContext.Create().Database.Initialize(true);
+            }
+            catch (Exception ex)
+            {
+                
+            }
         }
     }
 }

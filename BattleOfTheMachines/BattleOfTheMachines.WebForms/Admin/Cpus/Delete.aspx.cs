@@ -48,7 +48,7 @@ namespace BattleOfTheMachines.WebForms.Admin.Cpus
 
             using (_db)
             {
-                return _db.Processors.Where(m => m.Id == Id).FirstOrDefault();
+                return _db.Processors.Where(m => m.Id == Id.ToString()).FirstOrDefault();
             }
         }
 

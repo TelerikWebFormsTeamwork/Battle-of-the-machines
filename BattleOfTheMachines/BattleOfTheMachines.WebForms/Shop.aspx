@@ -22,6 +22,11 @@
                 <asp:DynamicField DataField="Cores" />
                 <asp:DynamicField DataField="CoreSpeed" />
                 <asp:DynamicField DataField="Model" />
+                <asp:TemplateField>
+                    <ItemTemplate>
+                        <asp:Button runat="server" OnCommand="BuyCommand" CommandArgument='<%# "Processor%" + Item.Id %>' Text="BUY" />
+                    </ItemTemplate>
+                </asp:TemplateField>
               </Columns>
         
                 <PagerSettings Mode="NumericFirstLast"></PagerSettings>
@@ -41,6 +46,11 @@
               <Columns>
                 <asp:DynamicField DataField="Memory" />
                 <asp:DynamicField DataField="Model" />
+                  <asp:TemplateField>
+                    <ItemTemplate>
+                        <asp:Button runat="server" OnCommand="BuyCommand" CommandArgument='<%# "Ram%" + Item.Id %>' Text="BUY" />
+                    </ItemTemplate>
+                </asp:TemplateField>
               </Columns>
         
                 <PagerSettings Mode="NumericFirstLast"></PagerSettings>
@@ -60,6 +70,11 @@
               <Columns>
                 <asp:DynamicField DataField="Type" />
                 <asp:DynamicField DataField="Speed" />
+                  <asp:TemplateField>
+                    <ItemTemplate>
+                        <asp:Button runat="server" OnCommand="BuyCommand" CommandArgument='<%# "Network%" + Item.Id %>' Text="BUY" />
+                    </ItemTemplate>
+                </asp:TemplateField>
               </Columns>
         
                 <PagerSettings Mode="NumericFirstLast"></PagerSettings>
@@ -82,6 +97,11 @@
                   <asp:DynamicField DataField="Cores" />
                   <asp:DynamicField DataField="CoreSpeed" />
                   <asp:DynamicField DataField="VideoMemory" />
+                  <asp:TemplateField>
+                    <ItemTemplate>
+                        <asp:Button runat="server" OnCommand="BuyCommand" CommandArgument='<%# "Graphics%" + Item.Id %>' Text="BUY" />
+                    </ItemTemplate>
+                </asp:TemplateField>
               </Columns>
         
                 <PagerSettings Mode="NumericFirstLast"></PagerSettings>

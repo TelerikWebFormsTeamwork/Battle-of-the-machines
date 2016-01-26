@@ -48,7 +48,7 @@ namespace BattleOfTheMachines.WebForms.Admin.GraphicsCards
 
             using (_db)
             {
-	            return _db.GraphicsCards.Where(m => m.Id == Id).FirstOrDefault();
+	            return _db.GraphicsCards.Where(m => m.Id == Id.ToString()).FirstOrDefault();
             }
         }
 

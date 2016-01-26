@@ -48,7 +48,7 @@ namespace BattleOfTheMachines.WebForms.Admin.Rams
 
             using (_db)
             {
-	            return _db.Rams.Where(m => m.Id == Id).FirstOrDefault();
+	            return _db.Rams.Where(m => m.Id == Id.ToString()).FirstOrDefault();
             }
         }
 

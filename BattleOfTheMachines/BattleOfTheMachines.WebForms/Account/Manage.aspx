@@ -46,7 +46,7 @@
                     <dd>
                         <asp:Label Text="" ID="PhoneNumber" runat="server" />
                         <asp:HyperLink NavigateUrl="/Account/AddPhoneNumber" runat="server" Text="[Change]" /> &nbsp;|&nbsp;
-                        <asp:LinkButton Text="[Remove]" OnClick="RemovePhone_Click" runat="server" />
+                        <asp:LinkButton Text="[Remove]" BuyItem="RemovePhone_Click" runat="server" />
                     </dd>
                     <% } %>
                     --%>
@@ -61,14 +61,14 @@
                           { %> 
                         <%--
                         Enabled
-                        <asp:LinkButton Text="[Disable]" runat="server" CommandArgument="false" OnClick="TwoFactorDisable_Click" />
+                        <asp:LinkButton Text="[Disable]" runat="server" CommandArgument="false" BuyItem="TwoFactorDisable_Click" />
                         --%>
                         <% }
                           else
                           { %> 
                         <%--
                         Disabled
-                        <asp:LinkButton Text="[Enable]" CommandArgument="true" OnClick="TwoFactorEnable_Click" runat="server" />
+                        <asp:LinkButton Text="[Enable]" CommandArgument="true" BuyItem="TwoFactorEnable_Click" runat="server" />
                         --%>
                         <% } %>
                     </dd>

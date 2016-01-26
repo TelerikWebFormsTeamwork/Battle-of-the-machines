@@ -31,7 +31,7 @@ namespace BattleOfTheMachines.WebForms.Admin.Networks
 
             using (_db)
             {
-	            return _db.Networks.Where(m => m.Id == Id).FirstOrDefault();
+	            return _db.Networks.Where(m => m.Id == Id.ToString()).FirstOrDefault();
             }
         }
 
