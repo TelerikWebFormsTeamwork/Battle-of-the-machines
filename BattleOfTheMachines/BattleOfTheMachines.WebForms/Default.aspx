@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="BattleOfTheMachines.WebForms._Default" %>
+<%@ OutputCache VaryByParam="None" Duration="300" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
@@ -7,6 +8,16 @@
         <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS, and JavaScript.</p>
         <p><a href="http://www.asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
     </div>
+    
+    <asp:ListView runat="server" ItemType="BattleOfTheMachines.Data.Models.Motherboard" SelectMethod="GetTopMachines">
+        <ItemTemplate>
+            <tr>
+                <td><%# DateTime.Now.ToString() %></td>
+                <td><strong><%# Item.Name %></strong></td>
+                <td><%# Item.Processor.Power + Item.GraphicsCard.Power + Item.Network.Power + Item.Ram.Power %></td>
+            </tr>
+        </ItemTemplate>
+    </asp:ListView>
 
     <div class="row">
         <div class="col-md-4">
