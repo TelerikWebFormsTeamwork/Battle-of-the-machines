@@ -7,90 +7,126 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace BattleOfTheMachines.WebForms.Users {
+namespace BattleOfTheMachines.WebForms {
     
     
-    public partial class Machine {
+    public partial class Shop {
         
         /// <summary>
-        /// machineName control.
+        /// ProcessorsTab control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl machineName;
+        protected global::System.Web.UI.WebControls.Button ProcessorsTab;
         
         /// <summary>
-        /// processor control.
+        /// RamsTab control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image processor;
+        protected global::System.Web.UI.WebControls.Button RamsTab;
         
         /// <summary>
-        /// network control.
+        /// Networkstab control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image network;
+        protected global::System.Web.UI.WebControls.Button Networkstab;
         
         /// <summary>
-        /// ram control.
+        /// GraphicCardsTab control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image ram;
+        protected global::System.Web.UI.WebControls.Button GraphicCardsTab;
         
         /// <summary>
-        /// graphics control.
+        /// Multiview1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image graphics;
+        protected global::System.Web.UI.WebControls.MultiView Multiview1;
         
         /// <summary>
-        /// processorPh control.
+        /// processorsView control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTableCell processorPh;
+        protected global::System.Web.UI.WebControls.View processorsView;
         
         /// <summary>
-        /// ramPh control.
+        /// processorsGrid control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTableCell ramPh;
+        protected global::System.Web.UI.WebControls.GridView processorsGrid;
         
         /// <summary>
-        /// networkPh control.
+        /// ramsView control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTableCell networkPh;
+        protected global::System.Web.UI.WebControls.View ramsView;
         
         /// <summary>
-        /// graphicsPh control.
+        /// ramsGrid control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTableCell graphicsPh;
+        protected global::System.Web.UI.WebControls.GridView ramsGrid;
+        
+        /// <summary>
+        /// networksView control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.View networksView;
+        
+        /// <summary>
+        /// networksGrid control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView networksGrid;
+        
+        /// <summary>
+        /// graphicsView control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.View graphicsView;
+        
+        /// <summary>
+        /// graphicsGrid control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView graphicsGrid;
     }
 }

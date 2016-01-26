@@ -1,6 +1,7 @@
 ﻿namespace BattleOfTheMachines.Data.Models
 {
     using System;
+    using System.ComponentModel;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
 
@@ -40,6 +41,9 @@
         public Guid RamId { get; set; }
 
         public virtual Ram Ram { get; set; }
+        
+        [DefaultValue(0)]
+        public int Currency { get; set; }
 
         [ForeignKey("Network")]
         [Required]
