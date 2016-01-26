@@ -15,7 +15,7 @@
         public Guid Id { get; set; }
 
         [ForeignKey("Owner")]
-        public Guid OwnerId { get; set; }
+        public string OwnerId { get; set; }
 
         [Required]
         public virtual User Owner { get; set; }

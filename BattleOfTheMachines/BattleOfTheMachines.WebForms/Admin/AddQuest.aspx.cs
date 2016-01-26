@@ -5,7 +5,7 @@
     using Services.Data.Contracts;
     using System;
 
-    public partial class AddQuest :System.Web.UI.Page
+    public partial class AddQuest: System.Web.UI.Page
     {
         [Inject]
         public IQuestsService Quests { get; set; }
@@ -29,7 +29,7 @@
                 {
                     if (questImage.PostedFile.ContentLength < 3 * 102400)
                     {
-                        this.Quests.Add(name.Text, description.InnerText, float.Parse(duration.Value), float.Parse(this.powerRequired.Value), questImage.FileBytes, selectedPartType);
+                        this.Quests.Add(name.Text, description.InnerText, int.Parse(duration.Value), int.Parse(this.powerRequired.Value), questImage.FileBytes, selectedPartType);
                         Server.Transfer("../Default.aspx", true);
                     }
                     else
@@ -44,7 +44,7 @@
             }
             else
             {
-                this.Quests.Add(name.Text, description.InnerText, float.Parse(duration.Value), float.Parse(this.powerRequired.Value), null, selectedPartType);
+                this.Quests.Add(name.Text, description.InnerText, int.Parse(duration.Value), float.Parse(this.powerRequired.Value), null, selectedPartType);
                 Server.Transfer("../Default.aspx", true);
             }
         }

@@ -11,6 +11,8 @@
         {
         }
 
+        public virtual IDbSet<Motherboard> Motherboards { get; set; }
+
         public virtual IDbSet<Quest> Quests { get; set; }
 
         public virtual IDbSet<Cpu> Cpus { get; set; }
