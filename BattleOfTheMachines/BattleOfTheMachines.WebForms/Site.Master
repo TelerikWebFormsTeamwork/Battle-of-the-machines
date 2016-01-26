@@ -111,7 +111,7 @@
         </NodeTemplate>
     </asp:SiteMapPath>
 
-        <div class="container body-content">
+        <div class="container body-content" style="display: block">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
             <hr />

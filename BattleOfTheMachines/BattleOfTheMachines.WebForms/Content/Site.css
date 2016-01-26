@@ -50,6 +50,11 @@ input[type="select"] {
     list-style: none;
 }
 
+.machine-table {
+    display: inline-block;
+    float: left;
+}
+
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
     .jumbotron {
