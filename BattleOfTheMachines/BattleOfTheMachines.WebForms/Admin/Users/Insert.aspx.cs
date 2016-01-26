@@ -1,50 +1,41 @@
-﻿using System;
+﻿using BattleOfTheMachines.Data.Models;
+using BattleOfTheMachines.WebForms.Helpers;
+using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.Owin;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Data.Entity;
-using BattleOfTheMachines.Data.Models;
-using BattleOfTheMachines.Data;
 
 namespace BattleOfTheMachines.WebForms.Admin.Users
 {
     public partial class Insert : System.Web.UI.Page
     {
-		protected BattleOfTheMachines.Data.BattleOfTheMachinesDbContext _db = new BattleOfTheMachines.Data.BattleOfTheMachinesDbContext();
-
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
 
-        // This is the Insert method to insert the entered User item
-        // USAGE: <asp:FormView InsertMethod="InsertItem">
-        public void InsertItem()
+        protected void AddUser_Click(object sender, EventArgs e)
         {
-            using (_db)
+            var manager = Context.GetOwinContext().GetUserManager<ApplicationUserManager>();
+            var signInManager = Context.GetOwinContext().Get<ApplicationSignInManager>();
+            var user = new User() { UserName = Email.Text, Email = Email.Text };
+            IdentityResult result = manager.Create(user, Password.Text);
+            if (result.Succeeded)
             {
-                var item = new BattleOfTheMachines.Data.Models.User();
-
-                TryUpdateModel(item);
-
-                if (ModelState.IsValid)
-                {
-                    // Save changes
-                    _db.Users.Add(item);
-                    _db.SaveChanges();
-
-                    Response.Redirect("Default");
-                }
+                // For more information on how to enable account confirmation and password reset please visit http://go.microsoft.com/fwlink/?LinkID=320771
+                //string code = manager.GenerateEmailConfirmationToken(user.Id);
+                //string callbackUrl = IdentityHelper.GetUserConfirmationRedirectUrl(code, user.Id, Request);
+                //manager.SendEmail(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>.");
+                
+                IdentityHelper.RedirectToReturnUrl("~/Admin/Users/Default", Response);
             }
-        }
-
-        protected void ItemCommand(object sender, FormViewCommandEventArgs e)
-        {
-            if (e.CommandName.Equals("Cancel", StringComparison.OrdinalIgnoreCase))
+            else
             {
-                Response.Redirect("Default");
+                ErrorMessage.Text = result.Errors.FirstOrDefault();
             }
         }
     }
