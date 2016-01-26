@@ -1,9 +1,9 @@
-﻿<%@ Page Title="UserList" Language="C#" MasterPageFile="~/Site.Master" CodeBehind="Default.aspx.cs" Inherits="BattleOfTheMachines.WebForms.Admin.Users.Default" %>
+﻿<%@ Page Title="UserList" Language="C#" MasterPageFile="~/Admin/Admin.master" CodeBehind="Default.aspx.cs" Inherits="BattleOfTheMachines.WebForms.Admin.Users.Default" %>
 <%@ Register TagPrefix="FriendlyUrls" Namespace="Microsoft.AspNet.FriendlyUrls" %>
 <asp:Content runat="server" ContentPlaceHolderID="MainContent">
     <h2>Users List</h2>
     <p>
-        <asp:HyperLink runat="server" NavigateUrl="Insert" Text="Create new" />
+        <asp:HyperLink runat="server" NavigateUrl="Insert" Text="Create new" CssClass="btn btn-raised btn-primary btn-lg"/>
     </p>
     <div>
         <asp:ListView id="ListView1" runat="server"
@@ -14,7 +14,7 @@
                 There are no entries found for Users
             </EmptyDataTemplate>
             <LayoutTemplate>
-                <table class="table">
+                <table class="table table-striped table-hover">
                     <thead>
                         <tr>
                             <th>
@@ -24,31 +24,7 @@
 								<asp:LinkButton Text="Email" CommandName="Sort" CommandArgument="Email" runat="Server" />
 							</th>
                             <th>
-								<asp:LinkButton Text="EmailConfirmed" CommandName="Sort" CommandArgument="EmailConfirmed" runat="Server" />
-							</th>
-                            <th>
-								<asp:LinkButton Text="PasswordHash" CommandName="Sort" CommandArgument="PasswordHash" runat="Server" />
-							</th>
-                            <th>
-								<asp:LinkButton Text="SecurityStamp" CommandName="Sort" CommandArgument="SecurityStamp" runat="Server" />
-							</th>
-                            <th>
 								<asp:LinkButton Text="PhoneNumber" CommandName="Sort" CommandArgument="PhoneNumber" runat="Server" />
-							</th>
-                            <th>
-								<asp:LinkButton Text="PhoneNumberConfirmed" CommandName="Sort" CommandArgument="PhoneNumberConfirmed" runat="Server" />
-							</th>
-                            <th>
-								<asp:LinkButton Text="TwoFactorEnabled" CommandName="Sort" CommandArgument="TwoFactorEnabled" runat="Server" />
-							</th>
-                            <th>
-								<asp:LinkButton Text="LockoutEndDateUtc" CommandName="Sort" CommandArgument="LockoutEndDateUtc" runat="Server" />
-							</th>
-                            <th>
-								<asp:LinkButton Text="LockoutEnabled" CommandName="Sort" CommandArgument="LockoutEnabled" runat="Server" />
-							</th>
-                            <th>
-								<asp:LinkButton Text="AccessFailedCount" CommandName="Sort" CommandArgument="AccessFailedCount" runat="Server" />
 							</th>
                             <th>
 								<asp:LinkButton Text="UserName" CommandName="Sort" CommandArgument="UserName" runat="Server" />
@@ -77,39 +53,13 @@
 								<asp:DynamicControl runat="server" DataField="Email" ID="Email" Mode="ReadOnly" />
 							</td>
 							<td>
-								<asp:DynamicControl runat="server" DataField="EmailConfirmed" ID="EmailConfirmed" Mode="ReadOnly" />
-							</td>
-							<td>
-								<asp:DynamicControl runat="server" DataField="PasswordHash" ID="PasswordHash" Mode="ReadOnly" />
-							</td>
-							<td>
-								<asp:DynamicControl runat="server" DataField="SecurityStamp" ID="SecurityStamp" Mode="ReadOnly" />
-							</td>
-							<td>
 								<asp:DynamicControl runat="server" DataField="PhoneNumber" ID="PhoneNumber" Mode="ReadOnly" />
-							</td>
-							<td>
-								<asp:DynamicControl runat="server" DataField="PhoneNumberConfirmed" ID="PhoneNumberConfirmed" Mode="ReadOnly" />
-							</td>
-							<td>
-								<asp:DynamicControl runat="server" DataField="TwoFactorEnabled" ID="TwoFactorEnabled" Mode="ReadOnly" />
-							</td>
-							<td>
-								<asp:DynamicControl runat="server" DataField="LockoutEndDateUtc" ID="LockoutEndDateUtc" Mode="ReadOnly" />
-							</td>
-							<td>
-								<asp:DynamicControl runat="server" DataField="LockoutEnabled" ID="LockoutEnabled" Mode="ReadOnly" />
-							</td>
-							<td>
-								<asp:DynamicControl runat="server" DataField="AccessFailedCount" ID="AccessFailedCount" Mode="ReadOnly" />
 							</td>
 							<td>
 								<asp:DynamicControl runat="server" DataField="UserName" ID="UserName" Mode="ReadOnly" />
 							</td>
                     <td>
-					    <asp:HyperLink runat="server" NavigateUrl='<%# FriendlyUrl.Href("~/Admin/Users/Details", Item.Id) %>' Text="Details" /> | 
-					    <asp:HyperLink runat="server" NavigateUrl='<%# FriendlyUrl.Href("~/Admin/Users/Edit", Item.Id) %>' Text="Edit" /> | 
-                        <asp:HyperLink runat="server" NavigateUrl='<%# FriendlyUrl.Href("~/Admin/Users/Delete", Item.Id) %>' Text="Delete" />
+                        <btm:dropdownMenu runat="server" UnitId="<%# Item.Id %>" UnitType="Users"/>
                     </td>
                 </tr>
             </ItemTemplate>

@@ -11,7 +11,7 @@
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:PlaceHolder>
-    <webopt:bundlereference runat="server" path="~/Content/css" />
+    <webopt:BundleReference runat="server" Path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <link href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
@@ -35,12 +35,12 @@
                 <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
                 <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
                 <asp:ScriptReference Name="WebFormsBundle" />
-                <%--Site Scripts--%>              
+                <%--Site Scripts--%>
                 <asp:ScriptReference Path="~/Scripts/ripples.min.js" />
                 <asp:ScriptReference Path="~/Scripts/material.min.js" />
             </Scripts>
         </asp:ScriptManager>
-        
+
         <div class="navbar navbar-default" style="margin-top: 0; padding-top: 0">
             <div class="container">
                 <div class="navbar-header">
@@ -56,18 +56,7 @@
                         <li><a runat="server" href="~/">Home</a></li>
                         <li><a runat="server" href="~/About">About</a></li>
                         <li><a runat="server" href="~/Contact">Contact</a></li>
-                        <li class="dropdown">
-                            <a href="bootstrap-elements.html" data-target="#" class="dropdown-toggle" data-toggle="dropdown">Admin panel <i class="material-icons">supervisor_account</i><b class="caret"></b></a>
-                            <ul class="dropdown-menu">
-                                <li><a runat="server" href="~/Admin/AddQuest">Add new quest</a></li>
-                                <li class="divider"></li>
-                                <li class="dropdown-header">Items</li>
-                                <li><a runat="server" href="~/Admin/AddCpu">Add new CPU</a></li>
-                                <li><a runat="server" href="~/Admin/AddGpu">Add new GPU</a></li>
-                                <li><a runat="server" href="~/Admin/AddNetwork">Add new Network</a></li>
-                                <li><a runat="server" href="~/Admin/AddRam">Add new RAM</a></li>
-                            </ul>
-                        </li>
+                        <li><a runat="server" href="~/Admin/Users/Default">Admin panel <i class="material-icons">supervisor_account</i></a></li>
                     </ul>
                     <asp:LoginView runat="server" ViewStateMode="Disabled">
                         <AnonymousTemplate>
@@ -89,27 +78,26 @@
             </div>
         </div>
 
-        <asp:SiteMapPath 
-        ID="SiteMap1"
-        runat="server"
-        PathSeparator=" / " 
-        ParentLevelsDisplayed="1" 
-        PathDirection="RootToCurrent" 
-        RenderCurrentNodeAsLink="false" 
-        ShowToolTips="false"
-        CssClass="breadcrumb sitemap">
-        <NodeTemplate>
-            <span>
-                <asp:HyperLink
-                    id="lnkPage"
-                    Text='<%# Eval("Title") %>'
-                    NavigateUrl='<%# Eval("Url") %>'
-                    ToolTip='<%# Eval("Description") %>'
-                    Runat="server"
-                 />
-            </span>
-        </NodeTemplate>
-    </asp:SiteMapPath>
+        <asp:SiteMapPath
+            ID="SiteMap1"
+            runat="server"
+            PathSeparator=" / "
+            ParentLevelsDisplayed="1"
+            PathDirection="RootToCurrent"
+            RenderCurrentNodeAsLink="false"
+            ShowToolTips="false"
+            CssClass="breadcrumb sitemap">
+            <NodeTemplate>
+                <span>
+                    <asp:HyperLink
+                        ID="lnkPage"
+                        Text='<%# Eval("Title") %>'
+                        NavigateUrl='<%# Eval("Url") %>'
+                        ToolTip='<%# Eval("Description") %>'
+                        runat="server" />
+                </span>
+            </NodeTemplate>
+        </asp:SiteMapPath>
 
         <div class="container body-content" style="display: block">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
@@ -120,7 +108,7 @@
             </footer>
         </div>
     </form>
-    <script> 
+    <script>
         $.material.init();
     </script>
 </body>

@@ -1,9 +1,9 @@
-﻿<%@ Page Title="NetworkList" Language="C#" MasterPageFile="~/Site.Master" CodeBehind="Default.aspx.cs" Inherits="BattleOfTheMachines.WebForms.Admin.Networks.Default" %>
+﻿<%@ Page Title="NetworkList" Language="C#" MasterPageFile="~/Admin/Admin.master" CodeBehind="Default.aspx.cs" Inherits="BattleOfTheMachines.WebForms.Admin.Networks.Default" %>
 <%@ Register TagPrefix="FriendlyUrls" Namespace="Microsoft.AspNet.FriendlyUrls" %>
 <asp:Content runat="server" ContentPlaceHolderID="MainContent">
     <h2>Networks List</h2>
     <p>
-        <asp:HyperLink runat="server" NavigateUrl="Insert" Text="Create new" />
+        <asp:HyperLink runat="server" NavigateUrl="Insert" Text="Create new" CssClass="btn btn-raised btn-primary btn-lg"/>
     </p>
     <div>
         <asp:ListView id="ListView1" runat="server"
@@ -14,7 +14,7 @@
                 There are no entries found for Networks
             </EmptyDataTemplate>
             <LayoutTemplate>
-                <table class="table">
+                <table class="table table-striped table-hover">
                     <thead>
                         <tr>
                             <th>
@@ -25,9 +25,6 @@
 							</th>
                             <th>
 								<asp:LinkButton Text="Speed" CommandName="Sort" CommandArgument="Speed" runat="Server" />
-							</th>
-                            <th>
-								<asp:LinkButton Text="Image" CommandName="Sort" CommandArgument="Image" runat="Server" />
 							</th>
                             <th>&nbsp;</th>
                         </tr>
@@ -55,13 +52,8 @@
 							<td>
 								<asp:DynamicControl runat="server" DataField="Speed" ID="Speed" Mode="ReadOnly" />
 							</td>
-							<td>
-								<asp:DynamicControl runat="server" DataField="Image" ID="Image" Mode="ReadOnly" />
-							</td>
                     <td>
-					    <asp:HyperLink runat="server" NavigateUrl='<%# FriendlyUrl.Href("~/Admin/Networks/Details", Item.Id) %>' Text="Details" /> | 
-					    <asp:HyperLink runat="server" NavigateUrl='<%# FriendlyUrl.Href("~/Admin/Networks/Edit", Item.Id) %>' Text="Edit" /> | 
-                        <asp:HyperLink runat="server" NavigateUrl='<%# FriendlyUrl.Href("~/Admin/Networks/Delete", Item.Id) %>' Text="Delete" />
+                        <btm:dropdownMenu runat="server" UnitId="<%# Item.Id %>" UnitType="Networks"/>
                     </td>
                 </tr>
             </ItemTemplate>

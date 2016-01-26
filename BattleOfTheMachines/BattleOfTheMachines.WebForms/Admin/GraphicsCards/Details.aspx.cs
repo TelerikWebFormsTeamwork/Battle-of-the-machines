@@ -1,17 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.ModelBinding;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-using System.Data.Entity;
-using Microsoft.AspNet.FriendlyUrls.ModelBinding;
-using BattleOfTheMachines.Data.Models;
-using BattleOfTheMachines.Data;
-
-namespace BattleOfTheMachines.WebForms.Admin.GraphicsCards
+﻿namespace BattleOfTheMachines.WebForms.Admin.GraphicsCards
 {
+    using System;
+    using System.Linq;
+    using System.Web.UI.WebControls;
+    using Microsoft.AspNet.FriendlyUrls.ModelBinding;
+    using Helpers;
     public partial class Details : System.Web.UI.Page
     {
 		protected BattleOfTheMachines.Data.BattleOfTheMachinesDbContext _db = new BattleOfTheMachines.Data.BattleOfTheMachinesDbContext();
@@ -31,7 +24,9 @@ namespace BattleOfTheMachines.WebForms.Admin.GraphicsCards
 
             using (_db)
             {
-	            return _db.GraphicsCards.Where(m => m.Id == Id).FirstOrDefault();
+                var model = _db.GraphicsCards.Where(m => m.Id == Id).FirstOrDefault();
+                this.image.ImageUrl = ImageHelper.GetComponentUrl(model.Image);
+                return model;
             }
         }
 

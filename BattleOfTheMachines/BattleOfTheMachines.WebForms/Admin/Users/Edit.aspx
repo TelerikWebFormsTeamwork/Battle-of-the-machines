@@ -1,4 +1,4 @@
-﻿<%@ Page Title="UserEdit" Language="C#" MasterPageFile="~/Site.Master" CodeBehind="Edit.aspx.cs" Inherits="BattleOfTheMachines.WebForms.Admin.Users.Edit" %>
+﻿<%@ Page Title="UserEdit" Language="C#" MasterPageFile="~/Admin/Admin.master" CodeBehind="Edit.aspx.cs" Inherits="BattleOfTheMachines.WebForms.Admin.Users.Edit" %>
 <asp:Content runat="server" ContentPlaceHolderID="MainContent">
     <div>
 		<p>&nbsp;</p>
@@ -15,15 +15,9 @@
 					<asp:ValidationSummary runat="server" CssClass="alert alert-danger"  />                 
 						    <asp:DynamicControl Mode="Edit" DataField="Id" runat="server" />
 						    <asp:DynamicControl Mode="Edit" DataField="Email" runat="server" />
-						    <asp:DynamicControl Mode="Edit" DataField="EmailConfirmed" runat="server" />
 						    <asp:DynamicControl Mode="Edit" DataField="PasswordHash" runat="server" />
 						    <asp:DynamicControl Mode="Edit" DataField="SecurityStamp" runat="server" />
 						    <asp:DynamicControl Mode="Edit" DataField="PhoneNumber" runat="server" />
-						    <asp:DynamicControl Mode="Edit" DataField="PhoneNumberConfirmed" runat="server" />
-						    <asp:DynamicControl Mode="Edit" DataField="TwoFactorEnabled" runat="server" />
-						    <asp:DynamicControl Mode="Edit" DataField="LockoutEndDateUtc" runat="server" />
-						    <asp:DynamicControl Mode="Edit" DataField="LockoutEnabled" runat="server" />
-						    <asp:DynamicControl Mode="Edit" DataField="AccessFailedCount" runat="server" />
 						    <asp:DynamicControl Mode="Edit" DataField="UserName" runat="server" />
                     <div class="form-group">
                         <div class="col-sm-offset-2 col-sm-10">

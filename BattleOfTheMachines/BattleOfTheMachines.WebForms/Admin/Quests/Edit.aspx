@@ -1,4 +1,4 @@
-﻿<%@ Page Title="QuestEdit" Language="C#" MasterPageFile="~/Site.Master" CodeBehind="Edit.aspx.cs" Inherits="BattleOfTheMachines.WebForms.Admin.Quests.Edit" %>
+﻿<%@ Page Title="QuestEdit" Language="C#" MasterPageFile="~/Admin/Admin.master" CodeBehind="Edit.aspx.cs" Inherits="BattleOfTheMachines.WebForms.Admin.Quests.Edit" %>
 <asp:Content runat="server" ContentPlaceHolderID="MainContent">
     <div>
 		<p>&nbsp;</p>
@@ -16,7 +16,6 @@
 						    <asp:DynamicControl Mode="Edit" DataField="Name" runat="server" />
 						    <asp:DynamicControl Mode="Edit" DataField="Description" runat="server" />
 						    <asp:DynamicControl Mode="Edit" DataField="DurationInMinutes" runat="server" />
-						    <asp:DynamicControl Mode="Edit" DataField="Image" runat="server" />
 						    <asp:DynamicControl Mode="Edit" DataField="Specialization" runat="server" />
                     <div class="form-group">
                         <div class="col-sm-offset-2 col-sm-10">

@@ -9,9 +9,6 @@ using BattleOfTheMachines.WebForms.Helpers;
 
 namespace BattleOfTheMachines.WebForms.Account
 {
-    using BattleOfTheMachines.Data;
-    using BattleOfTheMachines.Data.Repositories;
-
     public partial class Register : Page
     {
         protected void CreateUser_Click(object sender, EventArgs e)

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="UserDelete" Language="C#" MasterPageFile="~/Site.Master" CodeBehind="Delete.aspx.cs" Inherits="BattleOfTheMachines.WebForms.Admin.Users.Delete" %>
+﻿<%@ Page Title="UserDelete" Language="C#" MasterPageFile="~/Admin/Admin.master" CodeBehind="Delete.aspx.cs" Inherits="BattleOfTheMachines.WebForms.Admin.Users.Delete" %>
 <asp:Content runat="server" ContentPlaceHolderID="MainContent">
     <div>
 		<p>&nbsp;</p>
@@ -39,22 +39,6 @@
 							</div>
 							<div class="row">
 								<div class="col-sm-2 text-right">
-									<strong>PasswordHash</strong>
-								</div>
-								<div class="col-sm-4">
-									<asp:DynamicControl runat="server" DataField="PasswordHash" ID="PasswordHash" Mode="ReadOnly" />
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-sm-2 text-right">
-									<strong>SecurityStamp</strong>
-								</div>
-								<div class="col-sm-4">
-									<asp:DynamicControl runat="server" DataField="SecurityStamp" ID="SecurityStamp" Mode="ReadOnly" />
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-sm-2 text-right">
 									<strong>PhoneNumber</strong>
 								</div>
 								<div class="col-sm-4">
@@ -67,38 +51,6 @@
 								</div>
 								<div class="col-sm-4">
 									<asp:DynamicControl runat="server" DataField="PhoneNumberConfirmed" ID="PhoneNumberConfirmed" Mode="ReadOnly" />
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-sm-2 text-right">
-									<strong>TwoFactorEnabled</strong>
-								</div>
-								<div class="col-sm-4">
-									<asp:DynamicControl runat="server" DataField="TwoFactorEnabled" ID="TwoFactorEnabled" Mode="ReadOnly" />
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-sm-2 text-right">
-									<strong>LockoutEndDateUtc</strong>
-								</div>
-								<div class="col-sm-4">
-									<asp:DynamicControl runat="server" DataField="LockoutEndDateUtc" ID="LockoutEndDateUtc" Mode="ReadOnly" />
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-sm-2 text-right">
-									<strong>LockoutEnabled</strong>
-								</div>
-								<div class="col-sm-4">
-									<asp:DynamicControl runat="server" DataField="LockoutEnabled" ID="LockoutEnabled" Mode="ReadOnly" />
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-sm-2 text-right">
-									<strong>AccessFailedCount</strong>
-								</div>
-								<div class="col-sm-4">
-									<asp:DynamicControl runat="server" DataField="AccessFailedCount" ID="AccessFailedCount" Mode="ReadOnly" />
 								</div>
 							</div>
 							<div class="row">

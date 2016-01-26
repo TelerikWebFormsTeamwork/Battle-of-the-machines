@@ -1,9 +1,9 @@
-﻿<%@ Page Title="CpuList" Language="C#" MasterPageFile="~/Site.Master" CodeBehind="Default.aspx.cs" Inherits="BattleOfTheMachines.WebForms.Admin.Cpus.Default" %>
+﻿<%@ Page Title="CpuList" Language="C#" MasterPageFile="~/Admin/Admin.master" CodeBehind="Default.aspx.cs" Inherits="BattleOfTheMachines.WebForms.Admin.Cpus.Default" %>
 <%@ Register TagPrefix="FriendlyUrls" Namespace="Microsoft.AspNet.FriendlyUrls" %>
 <asp:Content runat="server" ContentPlaceHolderID="MainContent">
     <h2>Cpus List</h2>
     <p>
-        <asp:HyperLink runat="server" NavigateUrl="Insert" Text="Create new" />
+        <asp:HyperLink runat="server" NavigateUrl="Insert" Text="Create new" CssClass="btn btn-raised btn-primary btn-lg"/>
     </p>
     <div>
         <asp:ListView id="ListView1" runat="server"
@@ -14,7 +14,7 @@
                 There are no entries found for Cpus
             </EmptyDataTemplate>
             <LayoutTemplate>
-                <table class="table">
+                <table class="table table-striped table-hover">
                     <thead>
                         <tr>
                             <th>
@@ -28,9 +28,6 @@
 							</th>
                             <th>
 								<asp:LinkButton Text="Cores" CommandName="Sort" CommandArgument="Cores" runat="Server" />
-							</th>
-                            <th>
-								<asp:LinkButton Text="Image" CommandName="Sort" CommandArgument="Image" runat="Server" />
 							</th>
                             <th>&nbsp;</th>
                         </tr>
@@ -61,13 +58,8 @@
 							<td>
 								<asp:DynamicControl runat="server" DataField="Cores" ID="Cores" Mode="ReadOnly" />
 							</td>
-							<td>
-								<asp:DynamicControl runat="server" DataField="Image" ID="Image" Mode="ReadOnly" />
-							</td>
                     <td>
-					    <asp:HyperLink runat="server" NavigateUrl='<%# FriendlyUrl.Href("~/Admin/Cpus/Details", Item.Id) %>' Text="Details" /> | 
-					    <asp:HyperLink runat="server" NavigateUrl='<%# FriendlyUrl.Href("~/Admin/Cpus/Edit", Item.Id) %>' Text="Edit" /> | 
-                        <asp:HyperLink runat="server" NavigateUrl='<%# FriendlyUrl.Href("~/Admin/Cpus/Delete", Item.Id) %>' Text="Delete" />
+                        <btm:dropdownMenu runat="server" UnitId="<%# Item.Id %>" UnitType="Cpus"/>
                     </td>
                 </tr>
             </ItemTemplate>

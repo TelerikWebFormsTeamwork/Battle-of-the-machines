@@ -1,50 +1,40 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-using System.Data.Entity;
-using BattleOfTheMachines.Data.Models;
-using BattleOfTheMachines.Data;
-
-namespace BattleOfTheMachines.WebForms.Admin.Rams
+﻿namespace BattleOfTheMachines.WebForms.Admin.Rams
 {
+    using Ninject;
+    using Services.Data.Contracts;
+    using System;
+
     public partial class Insert : System.Web.UI.Page
     {
-		protected BattleOfTheMachines.Data.BattleOfTheMachinesDbContext _db = new BattleOfTheMachines.Data.BattleOfTheMachinesDbContext();
+        [Inject]
+        public IRamsService Rams { get; set; }
 
-        protected void Page_Load(object sender, EventArgs e)
+        protected void AddRam_Click(object sender, EventArgs e)
         {
-
-        }
-
-        // This is the Insert method to insert the entered Ram item
-        // USAGE: <asp:FormView InsertMethod="InsertItem">
-        public void InsertItem()
-        {
-            using (_db)
+            if (ramImage.HasFile)
             {
-                var item = new BattleOfTheMachines.Data.Models.Ram();
-
-                TryUpdateModel(item);
-
-                if (ModelState.IsValid)
+                if (ramImage.PostedFile.ContentType == "image/jpeg"
+                    || ramImage.PostedFile.ContentType == "image/png")
                 {
-                    // Save changes
-                    _db.Rams.Add(item);
-                    _db.SaveChanges();
-
-                    Response.Redirect("Default");
+                    if (ramImage.PostedFile.ContentLength < 3 * 102400)
+                    {
+                        this.Rams.Add(model.Text, float.Parse(memorySpeed.Value), ramImage.FileBytes, int.Parse(memory.Value));
+                        Server.Transfer("Default.aspx", true);
+                    }
+                    else
+                    {
+                        ErrorMessage.Text = "Image must be less than 3 MB.";
+                    }
+                }
+                else
+                {
+                    ErrorMessage.Text = "Invalid image type.";
                 }
             }
-        }
-
-        protected void ItemCommand(object sender, FormViewCommandEventArgs e)
-        {
-            if (e.CommandName.Equals("Cancel", StringComparison.OrdinalIgnoreCase))
+            else
             {
-                Response.Redirect("Default");
+                this.Rams.Add(model.Text, float.Parse(memorySpeed.Value), null, int.Parse(memory.Value));
+                Server.Transfer("../Default.aspx", true);
             }
         }
     }

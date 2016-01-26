@@ -1,0 +1,19 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="BattleOfTheMachines.WebForms.Admin.Admin" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+    <div class="col-md-2">
+        <div class="btn-group-vertical">
+            <a href="~/Admin/Cpus/Default" class="btn btn-raised btn-lg btn-primary" runat="server">CPUs</a>
+            <a href="~/Admin/GraphicsCards/Default" class="btn btn-raised btn-lg btn-primary" runat="server">GPUs</a>
+            <a href="~/Admin/Networks/Default" class="btn btn-raised btn-lg btn-primary" runat="server">Networks</a>
+            <a href="~/Admin/Rams/Default" class="btn btn-raised btn-lg btn-primary" runat="server">RAMs</a>
+            <a href="~/Admin/Quests/Default" class="btn btn-raised btn-lg" runat="server">Quests</a>
+            <a href="~/Admin/Users/Default" class="btn btn-raised btn-lg" runat="server">Users</a>
+        </div>
+    </div>
+    <div class="col-md-10">
+
+        <asp:ContentPlaceHolder ID="MainContent" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+</asp:Content>
