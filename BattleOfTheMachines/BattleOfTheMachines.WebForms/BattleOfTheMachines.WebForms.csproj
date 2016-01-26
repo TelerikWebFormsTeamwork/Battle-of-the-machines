@@ -251,6 +251,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\ripples.min.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="Controls\MachineView.ascx" />
     <Content Include="DynamicData\FieldTemplates\Boolean.ascx" />
     <Content Include="DynamicData\FieldTemplates\Boolean_Edit.ascx" />
     <Content Include="DynamicData\FieldTemplates\Children.ascx" />
@@ -324,7 +325,6 @@
     <Content Include="Shop.aspx" />
     <Content Include="Site.Master" />
     <Content Include="Users\Machine.aspx" />
-    <Content Include="Users\Profile.aspx" />
     <Content Include="Users\Tutorial.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
@@ -692,6 +692,13 @@
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Controls\MachineView.ascx.cs">
+      <DependentUpon>MachineView.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\MachineView.ascx.designer.cs">
+      <DependentUpon>MachineView.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -866,13 +873,6 @@
     </Compile>
     <Compile Include="Users\Machine.aspx.designer.cs">
       <DependentUpon>Machine.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Users\Profile.aspx.cs">
-      <DependentUpon>Profile.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Users\Profile.aspx.designer.cs">
-      <DependentUpon>Profile.aspx</DependentUpon>
     </Compile>
     <Compile Include="Users\Tutorial.aspx.cs">
       <DependentUpon>Tutorial.aspx</DependentUpon>

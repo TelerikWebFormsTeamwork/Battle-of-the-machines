@@ -39,22 +39,6 @@
 							</div>
 							<div class="row">
 								<div class="col-sm-2 text-right">
-									<strong>PasswordHash</strong>
-								</div>
-								<div class="col-sm-4">
-									<asp:DynamicControl runat="server" DataField="PasswordHash" ID="PasswordHash" Mode="ReadOnly" />
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-sm-2 text-right">
-									<strong>SecurityStamp</strong>
-								</div>
-								<div class="col-sm-4">
-									<asp:DynamicControl runat="server" DataField="SecurityStamp" ID="SecurityStamp" Mode="ReadOnly" />
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-sm-2 text-right">
 									<strong>PhoneNumber</strong>
 								</div>
 								<div class="col-sm-4">

@@ -15,8 +15,6 @@
 					<asp:ValidationSummary runat="server" CssClass="alert alert-danger"  />                 
 						    <asp:DynamicControl Mode="Edit" DataField="Id" runat="server" />
 						    <asp:DynamicControl Mode="Edit" DataField="Email" runat="server" />
-						    <asp:DynamicControl Mode="Edit" DataField="PasswordHash" runat="server" />
-						    <asp:DynamicControl Mode="Edit" DataField="SecurityStamp" runat="server" />
 						    <asp:DynamicControl Mode="Edit" DataField="PhoneNumber" runat="server" />
 						    <asp:DynamicControl Mode="Edit" DataField="UserName" runat="server" />
                     <div class="form-group">
