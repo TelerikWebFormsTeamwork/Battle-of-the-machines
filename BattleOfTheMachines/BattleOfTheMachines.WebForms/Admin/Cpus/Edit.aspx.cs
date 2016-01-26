@@ -21,7 +21,7 @@ namespace BattleOfTheMachines.WebForms.Admin.Cpus
 
         // This is the Update methd to update the selected Cpu item
         // USAGE: <asp:FormView UpdateMethod="UpdateItem">
-        public void UpdateItem(Guid  Id)
+        public void UpdateItem(string  Id)
         {
             using (_db)
             {
@@ -47,7 +47,7 @@ namespace BattleOfTheMachines.WebForms.Admin.Cpus
 
         // This is the Select method to selects a single Cpu item with the id
         // USAGE: <asp:FormView SelectMethod="GetItem">
-        public BattleOfTheMachines.Data.Models.Cpu GetItem([FriendlyUrlSegmentsAttribute(0)]Guid? Id)
+        public BattleOfTheMachines.Data.Models.Cpu GetItem([FriendlyUrlSegmentsAttribute(0)]string Id)
         {
             if (Id == null)
             {

@@ -21,7 +21,7 @@ namespace BattleOfTheMachines.WebForms.Admin.Quests
 
         // This is the Update methd to update the selected Quest item
         // USAGE: <asp:FormView UpdateMethod="UpdateItem">
-        public void UpdateItem(Guid  Id)
+        public void UpdateItem(string Id)
         {
             using (_db)
             {
@@ -47,7 +47,7 @@ namespace BattleOfTheMachines.WebForms.Admin.Quests
 
         // This is the Select method to selects a single Quest item with the id
         // USAGE: <asp:FormView SelectMethod="GetItem">
-        public BattleOfTheMachines.Data.Models.Quest GetItem([FriendlyUrlSegmentsAttribute(0)]Guid? Id)
+        public BattleOfTheMachines.Data.Models.Quest GetItem([FriendlyUrlSegmentsAttribute(0)]string Id)
         {
             if (Id == null)
             {

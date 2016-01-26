@@ -11,7 +11,7 @@ namespace BattleOfTheMachines.WebForms.Controls
 {
 
 
-    public partial class BuyItemHelper
+    public partial class DropdownMenu
     {
     }
 }

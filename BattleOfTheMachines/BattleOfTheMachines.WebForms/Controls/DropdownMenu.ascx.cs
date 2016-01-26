@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace BattleOfTheMachines.WebForms.Admin
+namespace BattleOfTheMachines.WebForms.Controls
 {
     public partial class DropdownMenu : System.Web.UI.UserControl
     {
