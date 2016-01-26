@@ -25,8 +25,7 @@
                 this.HasMachine = true;
 
                 this.machineName.InnerText = machine.Name;
-
-            	var machine = db.Machines.ToList().First(x => x.OwnerId == this.User.Identity.GetUserId());
+                
             	this.processor.ImageUrl = ImageHelper.GetComponentUrl(machine.Processor.Image);
             	this.network.ImageUrl = ImageHelper.GetComponentUrl(machine.Network.Image);
             	this.ram.ImageUrl = ImageHelper.GetComponentUrl(machine.Ram.Image);
