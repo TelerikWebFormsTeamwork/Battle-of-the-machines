@@ -1,4 +1,4 @@
-﻿<%@ Page Title="UserInsert" Language="C#" MasterPageFile="~/Site.Master" CodeBehind="Insert.aspx.cs" Inherits="BattleOfTheMachines.WebForms.Admin.Users.Insert" %>
+﻿<%@ Page Title="UserInsert" Language="C#" MasterPageFile="~/Admin/Admin.master" CodeBehind="Insert.aspx.cs" Inherits="BattleOfTheMachines.WebForms.Admin.Users.Insert" %>
 <asp:Content runat="server" ContentPlaceHolderID="MainContent">
     <div>
 		<p>&nbsp;</p>

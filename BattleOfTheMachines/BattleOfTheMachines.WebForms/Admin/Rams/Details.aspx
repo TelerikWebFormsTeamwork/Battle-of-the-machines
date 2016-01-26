@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Ram Details" Language="C#" MasterPageFile="~/Site.Master" CodeBehind="Details.aspx.cs" Inherits="BattleOfTheMachines.WebForms.Admin.Rams.Details" %>
+﻿<%@ Page Title="Ram Details" Language="C#" MasterPageFile="~/Admin/Admin.master" CodeBehind="Details.aspx.cs" Inherits="BattleOfTheMachines.WebForms.Admin.Rams.Details" %>
 
 <asp:Content runat="server" ContentPlaceHolderID="MainContent">
     <div>

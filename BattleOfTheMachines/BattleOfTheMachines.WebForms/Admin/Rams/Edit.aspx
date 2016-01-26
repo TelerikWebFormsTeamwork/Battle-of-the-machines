@@ -1,4 +1,4 @@
-﻿<%@ Page Title="RamEdit" Language="C#" MasterPageFile="~/Site.Master" CodeBehind="Edit.aspx.cs" Inherits="BattleOfTheMachines.WebForms.Admin.Rams.Edit" %>
+﻿<%@ Page Title="RamEdit" Language="C#" MasterPageFile="~/Admin/Admin.master" CodeBehind="Edit.aspx.cs" Inherits="BattleOfTheMachines.WebForms.Admin.Rams.Edit" %>
 <asp:Content runat="server" ContentPlaceHolderID="MainContent">
     <div>
 		<p>&nbsp;</p>
@@ -16,7 +16,6 @@
 						    <asp:DynamicControl Mode="Edit" DataField="Id" runat="server" />
 						    <asp:DynamicControl Mode="Edit" DataField="Model" runat="server" />
 						    <asp:DynamicControl Mode="Edit" DataField="MemorySpeed" runat="server" />
-						    <asp:DynamicControl Mode="Edit" DataField="Image" runat="server" />
 						    <asp:DynamicControl Mode="Edit" DataField="Memory" runat="server" />
                     <div class="form-group">
                         <div class="col-sm-offset-2 col-sm-10">

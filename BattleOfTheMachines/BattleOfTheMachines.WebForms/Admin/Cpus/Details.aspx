@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Cpu Details" Language="C#" MasterPageFile="~/Site.Master" CodeBehind="Details.aspx.cs" Inherits="BattleOfTheMachines.WebForms.Admin.Cpus.Details" %>
+﻿<%@ Page Title="Cpu Details" Language="C#" MasterPageFile="~/Admin/Admin.master" CodeBehind="Details.aspx.cs" Inherits="BattleOfTheMachines.WebForms.Admin.Cpus.Details" %>
 
 <asp:Content runat="server" ContentPlaceHolderID="MainContent">
     <div>

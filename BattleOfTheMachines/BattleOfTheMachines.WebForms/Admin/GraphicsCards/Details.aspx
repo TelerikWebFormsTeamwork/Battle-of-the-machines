@@ -1,4 +1,4 @@
-﻿<%@ Page Title="GraphicsCard Details" Language="C#" MasterPageFile="~/Site.Master" CodeBehind="Details.aspx.cs" Inherits="BattleOfTheMachines.WebForms.Admin.GraphicsCards.Details" %>
+﻿<%@ Page Title="GraphicsCard Details" Language="C#" MasterPageFile="~/Admin/Admin.master" CodeBehind="Details.aspx.cs" Inherits="BattleOfTheMachines.WebForms.Admin.GraphicsCards.Details" %>
 
 <asp:Content runat="server" ContentPlaceHolderID="MainContent">
     <div>

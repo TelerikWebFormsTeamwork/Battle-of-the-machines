@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Network Details" Language="C#" MasterPageFile="~/Site.Master" CodeBehind="Details.aspx.cs" Inherits="BattleOfTheMachines.WebForms.Admin.Networks.Details" %>
+﻿<%@ Page Title="Network Details" Language="C#" MasterPageFile="~/Admin/Admin.master" CodeBehind="Details.aspx.cs" Inherits="BattleOfTheMachines.WebForms.Admin.Networks.Details" %>
 
 <asp:Content runat="server" ContentPlaceHolderID="MainContent">
     <div>
