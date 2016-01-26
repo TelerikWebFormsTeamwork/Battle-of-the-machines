@@ -59,9 +59,7 @@
 								<asp:DynamicControl runat="server" DataField="VideoMemory" ID="VideoMemory" Mode="ReadOnly" />
 							</td>
                     <td>
-					    <asp:HyperLink runat="server" NavigateUrl='<%# FriendlyUrl.Href("~/Admin/GraphicsCards/Details", Item.Id) %>' Text="Details" /> | 
-					    <asp:HyperLink runat="server" NavigateUrl='<%# FriendlyUrl.Href("~/Admin/GraphicsCards/Edit", Item.Id) %>' Text="Edit" /> | 
-                        <asp:HyperLink runat="server" NavigateUrl='<%# FriendlyUrl.Href("~/Admin/GraphicsCards/Delete", Item.Id) %>' Text="Delete" />
+                        <btm:dropdownMenu runat="server" UnitId="<%# Item.Id %>" UnitType="GraphicsCards"/>
                     </td>
                 </tr>
             </ItemTemplate>

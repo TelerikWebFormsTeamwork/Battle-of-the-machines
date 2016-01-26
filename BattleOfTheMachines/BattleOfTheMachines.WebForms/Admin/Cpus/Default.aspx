@@ -59,9 +59,7 @@
 								<asp:DynamicControl runat="server" DataField="Cores" ID="Cores" Mode="ReadOnly" />
 							</td>
                     <td>
-					    <asp:HyperLink runat="server" NavigateUrl='<%# FriendlyUrl.Href("~/Admin/Cpus/Details", Item.Id) %>' Text="Details" /> | 
-					    <asp:HyperLink runat="server" NavigateUrl='<%# FriendlyUrl.Href("~/Admin/Cpus/Edit", Item.Id) %>' Text="Edit" /> | 
-                        <asp:HyperLink runat="server" NavigateUrl='<%# FriendlyUrl.Href("~/Admin/Cpus/Delete", Item.Id) %>' Text="Delete" />
+                        <btm:dropdownMenu runat="server" UnitId="<%# Item.Id %>" UnitType="Cpus"/>
                     </td>
                 </tr>
             </ItemTemplate>
