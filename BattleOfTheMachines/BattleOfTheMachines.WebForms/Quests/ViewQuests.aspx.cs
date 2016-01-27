@@ -8,8 +8,8 @@
     using Data.Models.Enums;
     using Microsoft.AspNet.Identity;
     using Ninject;
-
-    public partial class ViewQuests: System.Web.UI.Page
+    using Data;
+    public partial class ViewQuests : System.Web.UI.Page
     {
         private const string TimerText = "You are busy.<br />Your quest will end on: ";
         private const string RewardText = "You have completed a task";
@@ -22,31 +22,43 @@
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            var userId = this.User.Identity.GetUserId();
+            var db = new BattleOfTheMachinesDbContext();
+            var machine = db.Machines.ToList().FirstOrDefault(x => x.OwnerId == Context.User.Identity.GetUserId());
 
-            var timer = this.Motherboards.GetQuestTimerById(userId);// - DateTime.Now;
-
-            // Get on quest view
-            if (timer > DateTime.Now && !IsPostBack)
+            if (machine == null)
             {
-                this.TimerLabel.Text = TimerText + timer.ToString();
-                this.TimerImage.Visible = true;
-
-                DisableQuestButtons();
+                Response.Redirect("~/Users/Tutorial");
             }
-
-            // Get reward view
-            if (timer != null && timer < DateTime.Now)
+            else
             {
-                this.TimerLabel.Text = RewardText;
-                this.QuestRewardButton.Visible = true;
 
-                DisableQuestButtons();
-            }
+                var userId = this.User.Identity.GetUserId();
 
-            if (timer == null)
-            {
-                EnableQuestButtons();
+                var timer = this.Motherboards.GetQuestTimerById(userId);// - DateTime.Now;
+
+                // Get on quest view
+                if (timer > DateTime.Now && !IsPostBack)
+                {
+                    this.TimerLabel.Text = TimerText + timer.ToString();
+                    this.TimerImage.Visible = true;
+
+                    DisableQuestButtons();
+                }
+
+                // Get reward view
+                if (timer != null && timer < DateTime.Now)
+                {
+                    this.TimerLabel.Text = RewardText;
+                    this.QuestRewardButton.Visible = true;
+
+                    DisableQuestButtons();
+                }
+
+                if (timer == null)
+                {
+                    EnableQuestButtons();
+                }
+
             }
         }
 
@@ -150,7 +162,7 @@
             {
                 this.TimerLabel.Text = TimerText + timer.ToString();
                 this.TimerImage.Visible = true;
-                
+
             }
 
             if (timer != null && timer < DateTime.Now)

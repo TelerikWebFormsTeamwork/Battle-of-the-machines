@@ -1,11 +1,5 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="MachineView.ascx.cs" Inherits="BattleOfTheMachines.WebForms.Controls.MachineView" %>
 
-<% if (!this.HasMachine)
-    {
-%>
-<h1>Your Machine's dead. Sorry! :(</h1>
-<%}
-    else { %>
 <div class="container">
 
     <div class="panel text-center">
@@ -60,4 +54,3 @@
         </table>
     </div>
 </div>
-    <% } %>

@@ -15,12 +15,8 @@
             var db = new BattleOfTheMachinesDbContext();
             var machine = db.Machines.ToList().FirstOrDefault(x => x.OwnerId == Context.User.Identity.GetUserId());
 
-            this.HasMachine = false;
-
             if (machine != null)
             {
-                this.HasMachine = true;
-
                 this.machineName.InnerText = machine.Name;
 
                 this.processorModel.InnerHtml = $"{machine.Processor.Model}";
@@ -37,6 +33,10 @@
                 this.network.ImageUrl = ImageHelper.GetComponentUrl(machine.Network.Image);
                 this.ram.ImageUrl = ImageHelper.GetComponentUrl(machine.Ram.Image);
                 this.graphics.ImageUrl = ImageHelper.GetComponentUrl(machine.GraphicsCard.Image);
+            }
+            else
+            {
+                Response.Redirect("~/Users/Tutorial");
             }
         }
     }

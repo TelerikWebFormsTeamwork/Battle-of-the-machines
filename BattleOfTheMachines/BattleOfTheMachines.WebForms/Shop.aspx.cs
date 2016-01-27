@@ -15,6 +15,13 @@
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            var db = new BattleOfTheMachinesDbContext();
+            var machine = db.Machines.ToList().FirstOrDefault(x => x.OwnerId == Context.User.Identity.GetUserId());           
+
+            if (machine == null)
+            {
+                Response.Redirect("~/Users/Tutorial");
+            }
         }
 
         public IQueryable<Cpu> ProcessorsGrid_GetData(object sender, EventArgs e)
@@ -90,6 +97,7 @@
             }
 
             db.SaveChanges();
+            Response.Redirect("~/Users/Machine");
         }
     }
 }

@@ -38,6 +38,7 @@
             try
             {
                 db.SaveChanges();
+                Response.Redirect("~/Users/Machine");
             }
             catch (Exception)
             {
