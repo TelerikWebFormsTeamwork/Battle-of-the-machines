@@ -21,7 +21,7 @@
     <asp:MultiView ID="Multiview1" runat="server" ActiveViewIndex="0">
         <asp:View ID="processorsView" runat="server">
             <div class="panel text-center">
-                <h2>Quests, straining the CPU</h2>
+                <h3>Quests, straining the CPU</h3>
             </div>
             <asp:GridView runat="server" ID="processorsQuestGrid"
                 ItemType="BattleOfTheMachines.Data.Models.Quest"
@@ -46,7 +46,7 @@
         </asp:View>
         <asp:View ID="ramView" runat="server">
             <div class="panel text-center">
-                <h2>Quests, straining the RAM</h2>
+                <h3>Quests, straining the RAM</h3>
             </div>
             <asp:GridView runat="server" ID="ramQuestGrid"
                 ItemType="BattleOfTheMachines.Data.Models.Quest"
@@ -72,7 +72,7 @@
 
         <asp:View ID="graphicsCardView" runat="server">
             <div class="panel text-center">
-                <h2>Quests, straining the Graphics Card</h2>
+                <h3>Quests, straining the Graphics Card</h3>
             </div>
             <asp:GridView runat="server" ID="graphicsCardQuestGrid"
                 ItemType="BattleOfTheMachines.Data.Models.Quest"
@@ -81,7 +81,7 @@
                 AllowPaging="True"
                 AutoGenerateColumns="False"
                 PageSize="10"
-                CssClass="table table-hover table-striped"
+                CssClass="table table-hover table-striped text-center"
                 OnRowCommand="graphicsCardQuestGrid_RowCommand">
                 <Columns>
                     <asp:DynamicField DataField="Name" />
@@ -98,7 +98,7 @@
 
         <asp:View ID="networkView" runat="server">
             <div class="panel text-center">
-                <h2>Quests, straining the Network</h2>
+                <h3>Quests, straining the Network</h3>
             </div>
             <asp:GridView runat="server" ID="networkQuestGrid"
                 ItemType="BattleOfTheMachines.Data.Models.Quest"

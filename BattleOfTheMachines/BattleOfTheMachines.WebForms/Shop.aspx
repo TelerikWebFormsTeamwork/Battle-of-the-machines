@@ -35,7 +35,7 @@
                     <asp:DynamicField DataField="Price" />
                     <asp:TemplateField>
                         <ItemTemplate>
-                            <asp:Button runat="server" OnCommand="BuyCommand" CommandArgument='<%# "Processor%" + Item.Id + "%" + Item.Price %>' Text="BUY" />
+                            <asp:Button CssClass="btn btn-success" runat="server" OnCommand="BuyCommand" CommandArgument='<%# "Processor%" + Item.Id + "%" + Item.Price %>' Text="BUY" />
                         </ItemTemplate>
                     </asp:TemplateField>
                 </Columns>
@@ -64,7 +64,7 @@
                     <asp:DynamicField DataField="Price" />
                     <asp:TemplateField>
                         <ItemTemplate>
-                            <asp:Button runat="server" OnCommand="BuyCommand" CommandArgument='<%# "Ram%" + Item.Id + "%" + Item.Price %>' Text="BUY" />
+                            <asp:Button CssClass="btn btn-success" runat="server" OnCommand="BuyCommand" CommandArgument='<%# "Ram%" + Item.Id + "%" + Item.Price %>' Text="BUY" />
                         </ItemTemplate>
                     </asp:TemplateField>
                 </Columns>
@@ -92,7 +92,7 @@
                     <asp:DynamicField DataField="Price" />
                     <asp:TemplateField>
                         <ItemTemplate>
-                            <asp:Button runat="server" OnCommand="BuyCommand" CommandArgument='<%# "Network%" + Item.Id + "%" + Item.Price %>' Text="BUY" />
+                            <asp:Button CssClass="btn btn-success" runat="server" OnCommand="BuyCommand" CommandArgument='<%# "Network%" + Item.Id + "%" + Item.Price %>' Text="BUY" />
                         </ItemTemplate>
                     </asp:TemplateField>
                 </Columns>
@@ -122,7 +122,7 @@
                     <asp:DynamicField DataField="Price" />                    
                     <asp:TemplateField>
                         <ItemTemplate>
-                            <asp:Button runat="server" OnCommand="BuyCommand" CommandArgument='<%# "Graphics%" + Item.Id + "%" + Item.Price %>' Text="BUY" />
+                            <asp:Button CssClass="btn btn-success" runat="server" OnCommand="BuyCommand" CommandArgument='<%# "Graphics%" + Item.Id + "%" + Item.Price %>' Text="BUY" />
                         </ItemTemplate>
                     </asp:TemplateField>
                 </Columns>
