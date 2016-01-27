@@ -1,4 +1,5 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Rankings.ascx.cs" Inherits="BattleOfTheMachines.WebForms.Controls.Rankings" %>
+<%@ OutputCache Duration="300" VaryByParam="None" %>
 
 <div class="col-lg-6 col-lg-offset-3">
     <h1 class="text-center">Top Machines</h1>
