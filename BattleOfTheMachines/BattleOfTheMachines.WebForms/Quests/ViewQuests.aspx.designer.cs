@@ -13,24 +13,6 @@ namespace BattleOfTheMachines.WebForms.Quests {
     public partial class ViewQuests {
         
         /// <summary>
-        /// TimerPanel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.UpdatePanel TimerPanel;
-        
-        /// <summary>
-        /// QuestTimer control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.Timer QuestTimer;
-        
-        /// <summary>
         /// TimerLabel control.
         /// </summary>
         /// <remarks>
@@ -38,6 +20,24 @@ namespace BattleOfTheMachines.WebForms.Quests {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label TimerLabel;
+        
+        /// <summary>
+        /// TimerImage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlImage TimerImage;
+        
+        /// <summary>
+        /// QuestRewardButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button QuestRewardButton;
         
         /// <summary>
         /// ProcessorsTab control.

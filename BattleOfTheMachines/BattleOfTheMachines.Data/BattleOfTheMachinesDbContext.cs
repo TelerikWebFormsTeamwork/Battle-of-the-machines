@@ -10,18 +10,18 @@
             : base("DefaultConnection", throwIfV1Schema: false)
         {
         }
-
-        public virtual IDbSet<Motherboard> Motherboards { get; set; }
-
+        
         public virtual IDbSet<Quest> Quests { get; set; }
 
-        public virtual IDbSet<Cpu> Cpus { get; set; }
+        public virtual IDbSet<GraphicsCard> GraphicsCards { get; set; }
 
-        public virtual IDbSet<GraphicsCard> Gpus { get; set; }
+        public virtual IDbSet<Ram> Rams { get; set; }
 
         public virtual IDbSet<Network> Networks { get; set; }
 
-        public virtual IDbSet<Ram> Rams { get; set; }
+        public virtual IDbSet<Cpu> Processors { get; set; }
+
+        public virtual IDbSet<Motherboard> Machines { get; set; }
 
         public static BattleOfTheMachinesDbContext Create()
         {

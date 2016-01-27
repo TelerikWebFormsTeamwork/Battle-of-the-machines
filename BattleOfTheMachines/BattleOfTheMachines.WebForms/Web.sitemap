@@ -1,10 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
-    <siteMapNode url="~/" title="Home"  description="Home Page">
-        <siteMapNode url="~/About" title="About"  description="About" />
-        <siteMapNode url="~/Contact" title="Contact"  description="Contact" />
-      <siteMapNode title="Users">
-        <siteMapNode title="Profile" description="Profile page" url="~/Users/Profile"/>
-      </siteMapNode>
+  <siteMapNode url="~/" title="Home"  description="Home Page">
+    <siteMapNode url="~/About" title="About"  description="About" />
+    <siteMapNode url="~/Contact" title="Contact"  description="Contact" />
+    <siteMapNode title="Users">
+      <siteMapNode title="Profile" description="Profile page" url="~/Users/Profile"/>
+      <siteMapNode title="Tutorial" description="Game start up tutorial" url="~/Users/Tutorial"/>
     </siteMapNode>
+    <siteMapNode url="~/Leaderboard" title="Leaderboard" description="Leaderboard Page"/>
+  </siteMapNode>
 </siteMap>

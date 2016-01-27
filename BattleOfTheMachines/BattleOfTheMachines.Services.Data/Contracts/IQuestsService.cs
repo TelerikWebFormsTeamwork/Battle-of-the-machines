@@ -10,6 +10,8 @@
 
         void StartQuest(string name, string ownerId);
 
+        void FinishQuest(string ownerId);
+
         void Add(string name, string description, int duration, float powerRequired, byte[] image, PartType specialization);
     }
 }

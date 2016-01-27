@@ -10,11 +10,11 @@
 
         public Cpu()
         {
-            this.Id = Guid.NewGuid();
+            this.Id = Guid.NewGuid().ToString();
         }
 
         [Key]
-        public Guid Id { get; set; }
+        public string Id { get; set; }
 
         [Required]
         public string Model { get; set; }
@@ -24,7 +24,7 @@
 
         [Required]
         [Range(1, 8)]
-        public ushort Cores { get; set; }
+        public int Cores { get; set; }
 
         [Required]
         public byte[] Image { get; set; }

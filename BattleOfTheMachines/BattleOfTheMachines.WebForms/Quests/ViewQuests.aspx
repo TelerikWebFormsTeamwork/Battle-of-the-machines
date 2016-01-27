@@ -2,13 +2,19 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <h3><%: Title %>, based on their focus.</h3>
-    <asp:UpdatePanel ID="TimerPanel" runat="server" UpdateMode="Conditional">
+    <%--<asp:UpdatePanel ID="TimerPanel" runat="server" UpdateMode="Conditional">
         <ContentTemplate>
             <asp:Timer ID="QuestTimer" Interval="1000" OnTick="QuestTimer_Tick" runat="server" />
 
-            <asp:Label ID="TimerLabel" runat="server" Visible="true" />
+
         </ContentTemplate>
-    </asp:UpdatePanel>
+    </asp:UpdatePanel>--%>
+
+    <h2 class="container">
+        <asp:Label ID="TimerLabel" CssClass="col-md-7" runat="server" Visible="true" />
+        <img id="TimerImage" src="/Images/loading-gears-animation.gif" alt="Quest in progress" runat="server" visible="false" class="pull-right" />
+        <asp:Button ID="QuestRewardButton" Text="Get your reward" runat="server" Visible="false" CssClass="btn btn-success" OnClick="QuestRewardButton_Click" />
+    </h2>
 
     <asp:Button Text="Processors" BorderStyle="None" ID="ProcessorsTab" CssClass="Initial" runat="server" OnCommand="TabCommand" CommandArgument="0" />
     <asp:Button Text="Rams" BorderStyle="None" ID="RamsTab" CssClass="Initial" runat="server" OnCommand="TabCommand" CommandArgument="1" />
@@ -28,14 +34,14 @@
                 AllowPaging="True"
                 AutoGenerateColumns="False"
                 PageSize="10"
-                CssClass="table table-hover table-striped" 
+                CssClass="table table-hover table-striped"
                 OnRowCommand="processorsQuestGrid_RowCommand">
                 <Columns>
                     <asp:DynamicField DataField="Name" />
                     <asp:DynamicField DataField="Description" />
                     <asp:DynamicField DataField="DurationInMinutes" HeaderText="Duration (in minutes)" />
                     <asp:DynamicField DataField="PowerRequired" HeaderText="Required PC Power" />
-                    <asp:ButtonField HeaderText="Start task" ButtonType="Button" Text="Do it!" />
+                    <asp:ButtonField HeaderText="Start task" ButtonType="Button" Text="Do it!" ControlStyle-CssClass="btn btn-success" />
                 </Columns>
 
                 <PagerSettings Mode="NumericFirstLast"></PagerSettings>
@@ -53,14 +59,14 @@
                 AllowPaging="True"
                 AutoGenerateColumns="False"
                 PageSize="10"
-                CssClass="table table-hover table-striped" 
+                CssClass="table table-hover table-striped"
                 OnRowCommand="ramQuestGrid_RowCommand">
                 <Columns>
                     <asp:DynamicField DataField="Name" />
                     <asp:DynamicField DataField="Description" />
                     <asp:DynamicField DataField="DurationInMinutes" HeaderText="Duration (in minutes)" />
                     <asp:DynamicField DataField="PowerRequired" HeaderText="Required PC Power" />
-                    <asp:ButtonField HeaderText="Start task" ButtonType="Button" Text="Do it!" />
+                    <asp:ButtonField HeaderText="Start task" ButtonType="Button" Text="Do it!" ControlStyle-CssClass="btn btn-success" />
                 </Columns>
 
                 <PagerSettings Mode="NumericFirstLast"></PagerSettings>
@@ -79,14 +85,14 @@
                 AllowPaging="True"
                 AutoGenerateColumns="False"
                 PageSize="10"
-                CssClass="table table-hover table-striped" 
+                CssClass="table table-hover table-striped"
                 OnRowCommand="graphicsCardQuestGrid_RowCommand">
                 <Columns>
                     <asp:DynamicField DataField="Name" />
                     <asp:DynamicField DataField="Description" />
                     <asp:DynamicField DataField="DurationInMinutes" HeaderText="Duration (in minutes)" />
                     <asp:DynamicField DataField="PowerRequired" HeaderText="Required PC Power" />
-                    <asp:ButtonField HeaderText="Start task" ButtonType="Button" Text="Do it!" />
+                    <asp:ButtonField HeaderText="Start task" ButtonType="Button" Text="Do it!" ControlStyle-CssClass="btn btn-success" />
                 </Columns>
 
                 <PagerSettings Mode="NumericFirstLast"></PagerSettings>
@@ -105,14 +111,14 @@
                 AllowPaging="True"
                 AutoGenerateColumns="False"
                 PageSize="10"
-                CssClass="table table-hover table-striped" 
+                CssClass="table table-hover table-striped"
                 OnRowCommand="networkQuestGrid_RowCommand1">
                 <Columns>
                     <asp:DynamicField DataField="Name" />
                     <asp:DynamicField DataField="Description" />
                     <asp:DynamicField DataField="DurationInMinutes" HeaderText="Duration (in minutes)" />
                     <asp:DynamicField DataField="PowerRequired" HeaderText="Required PC Power" />
-                    <asp:ButtonField HeaderText="Start task" ButtonType="Button" Text="Do it!" />
+                    <asp:ButtonField HeaderText="Start task" ButtonType="Button" Text="Do it!" ControlStyle-CssClass="btn btn-success" />
                 </Columns>
 
                 <PagerSettings Mode="NumericFirstLast"></PagerSettings>

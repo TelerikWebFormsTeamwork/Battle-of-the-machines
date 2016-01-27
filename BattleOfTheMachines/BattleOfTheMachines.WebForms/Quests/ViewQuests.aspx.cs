@@ -11,6 +11,9 @@
 
     public partial class ViewQuests: System.Web.UI.Page
     {
+        private const string TimerText = "You are busy.<br />Your quest will end on: ";
+        private const string RewardText = "You have completed a task";
+
         [Inject]
         public IQuestsService Quests { get; set; }
 
@@ -21,40 +24,19 @@
         {
             var userId = this.User.Identity.GetUserId();
 
-            var timer = this.Motherboards.GetQuestTimerById(userId) - DateTime.Now;
+            var timer = this.Motherboards.GetQuestTimerById(userId);// - DateTime.Now;
 
-            if (timer > TimeSpan.Zero && !IsPostBack)
+            if (timer > DateTime.Now && !IsPostBack)
             {
-                this.TimerLabel.Text = timer.ToString();
+                this.TimerLabel.Text = TimerText + timer.ToString();
+                this.TimerImage.Visible = true;
             }
 
-            if (timer <= TimeSpan.Zero)
+            if (timer != null && timer < DateTime.Now)
             {
-
-                this.QuestTimer.Dispose();
-                this.TimerLabel.Text = string.Empty;
+                this.TimerLabel.Text = RewardText;
+                this.QuestRewardButton.Visible = true;
             }
-        }
-
-        protected void QuestTimer_Tick(object sender, EventArgs e)
-        {
-            if (string.IsNullOrWhiteSpace(this.TimerLabel.Text))
-            {
-                this.QuestTimer.Dispose();
-                return;
-            }
-            var timer = TimeSpan.Parse(this.TimerLabel.Text).Subtract(new TimeSpan(TimeSpan.TicksPerSecond));
-
-            if (timer <= TimeSpan.Zero)
-            {
-                Server.Transfer(Request.RawUrl);
-            }
-
-            this.TimerLabel.Text = timer.ToString();
-        }
-
-        protected void TimerPanel_Load(object sender, EventArgs e)
-        {
         }
 
         public IQueryable<Quest> processorsQuestGrid_GetData()
@@ -94,11 +76,13 @@
         protected void processorsQuestGrid_RowCommand(object sender, GridViewCommandEventArgs e)
         {
             var index = Convert.ToInt32(e.CommandArgument);
-            
+
             var selectedRow = this.processorsQuestGrid.Rows[index];
             var questName = (selectedRow.Cells[0].Controls[0].Controls[0].Controls[0] as Literal).Text;
 
             this.Quests.StartQuest(questName, this.User.Identity.GetUserId());
+
+            Response.Redirect(Request.RawUrl, false);
         }
 
         protected void ramQuestGrid_RowCommand(object sender, GridViewCommandEventArgs e)
@@ -109,6 +93,8 @@
             var questName = (selectedRow.Cells[0].Controls[0].Controls[0].Controls[0] as Literal).Text;
 
             this.Quests.StartQuest(questName, this.User.Identity.GetUserId());
+
+            Response.Redirect(Request.RawUrl, false);
         }
 
         protected void graphicsCardQuestGrid_RowCommand(object sender, GridViewCommandEventArgs e)
@@ -119,6 +105,8 @@
             var questName = (selectedRow.Cells[0].Controls[0].Controls[0].Controls[0] as Literal).Text;
 
             this.Quests.StartQuest(questName, this.User.Identity.GetUserId());
+
+            Response.Redirect(Request.RawUrl, false);
         }
 
         protected void networkQuestGrid_RowCommand1(object sender, GridViewCommandEventArgs e)
@@ -129,6 +117,14 @@
             var questName = (selectedRow.Cells[0].Controls[0].Controls[0].Controls[0] as Literal).Text;
 
             this.Quests.StartQuest(questName, this.User.Identity.GetUserId());
+
+            Response.Redirect(Request.RawUrl, false);
+        }
+
+        protected void QuestRewardButton_Click(object sender, EventArgs e)
+        {
+            this.Quests.FinishQuest(this.User.Identity.GetUserId());
+            Response.Redirect(Request.RawUrl, false);
         }
     }
 }

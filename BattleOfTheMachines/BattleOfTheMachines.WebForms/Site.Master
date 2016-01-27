@@ -16,7 +16,7 @@
     <link href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
 </head>
-<body>
+<body style="padding: 0">
     <form runat="server">
         <asp:ScriptManager runat="server">
             <Scripts>
@@ -41,28 +41,7 @@
             </Scripts>
         </asp:ScriptManager>
 
-        <asp:SiteMapPath
-            ID="SiteMap1"
-            runat="server"
-            PathSeparator=" / "
-            ParentLevelsDisplayed="1"
-            PathDirection="RootToCurrent"
-            RenderCurrentNodeAsLink="false"
-            ShowToolTips="true"
-            CssClass="breadcrumb">
-            <NodeTemplate>
-                <span>
-                    <asp:HyperLink
-                        ID="lnkPage"
-                        Text='<%# Eval("Title") %>'
-                        NavigateUrl='<%# Eval("Url") %>'
-                        ToolTip='<%# Eval("Description") %>'
-                        runat="server" />
-                </span>
-            </NodeTemplate>
-        </asp:SiteMapPath>
-
-        <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar navbar-default" style="margin-top: 0; padding-top: 0">
             <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -77,18 +56,15 @@
                         <li><a runat="server" href="~/">Home</a></li>
                         <li><a runat="server" href="~/About">About</a></li>
                         <li><a runat="server" href="~/Contact">Contact</a></li>
-                        <li class="dropdown">
-                            <a href="bootstrap-elements.html" data-target="#" class="dropdown-toggle" data-toggle="dropdown">Admin panel <i class="material-icons">supervisor_account</i><b class="caret"></b></a>
-                            <ul class="dropdown-menu">
-                                <li><a runat="server" href="~/Admin/AddQuest">Add new quest</a></li>
-                                <li class="divider"></li>
-                                <li class="dropdown-header">Items</li>
-                                <li><a runat="server" href="~/Admin/AddCpu">Add new CPU</a></li>
-                                <li><a runat="server" href="~/Admin/AddGpu">Add new GPU</a></li>
-                                <li><a runat="server" href="~/Admin/AddNetwork">Add new Network</a></li>
-                                <li><a runat="server" href="~/Admin/AddRam">Add new RAM</a></li>
-                            </ul>
-                        </li>
+                        <asp:LoginView runat="server">
+                            <RoleGroups>
+                                <asp:RoleGroup Roles="Admin">
+                                    <ContentTemplate>
+                                        <li><a runat="server" href="~/Admin/Users/Default">Admin panel <i class="material-icons">supervisor_account</i></a></li>
+                                    </ContentTemplate>
+                                </asp:RoleGroup>
+                            </RoleGroups>
+                        </asp:LoginView>
                     </ul>
                     <asp:LoginView runat="server" ViewStateMode="Disabled">
                         <AnonymousTemplate>
@@ -109,7 +85,29 @@
                 </div>
             </div>
         </div>
-        <div class="container body-content">
+
+        <asp:SiteMapPath
+            ID="SiteMap1"
+            runat="server"
+            PathSeparator=" / "
+            ParentLevelsDisplayed="1"
+            PathDirection="RootToCurrent"
+            RenderCurrentNodeAsLink="false"
+            ShowToolTips="false"
+            CssClass="breadcrumb sitemap">
+            <NodeTemplate>
+                <span>
+                    <asp:HyperLink
+                        ID="lnkPage"
+                        Text='<%# Eval("Title") %>'
+                        NavigateUrl='<%# Eval("Url") %>'
+                        ToolTip='<%# Eval("Description") %>'
+                        runat="server" />
+                </span>
+            </NodeTemplate>
+        </asp:SiteMapPath>
+
+        <div class="container body-content" style="display: block">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
             <hr />

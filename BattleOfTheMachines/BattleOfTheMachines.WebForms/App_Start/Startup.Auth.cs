@@ -53,9 +53,9 @@ namespace BattleOfTheMachines.WebForms
             //   consumerKey: "",
             //   consumerSecret: "");
 
-            //app.UseFacebookAuthentication(
-            //   appId: "",
-            //   appSecret: "");
+            app.UseFacebookAuthentication(
+               appId: "1196394077040819",
+               appSecret: "f26659235c12fe863cce681d86c2ff33");
 
             //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
             //{
