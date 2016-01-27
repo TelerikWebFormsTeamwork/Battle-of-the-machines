@@ -280,6 +280,7 @@
     </Content>
     <Content Include="Account\Web.config" />
     <Content Include="Admin\Admin.master" />
+    <Content Include="Admin\Web.config" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Images\graphics_default.png" />
     <Content Include="Images\machine.png" />

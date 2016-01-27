@@ -56,7 +56,15 @@
                         <li><a runat="server" href="~/">Home</a></li>
                         <li><a runat="server" href="~/About">About</a></li>
                         <li><a runat="server" href="~/Contact">Contact</a></li>
-                        <li><a runat="server" href="~/Admin/Users/Default">Admin panel <i class="material-icons">supervisor_account</i></a></li>
+                        <asp:LoginView runat="server">
+                            <RoleGroups>
+                                <asp:RoleGroup Roles="Admin">
+                                    <ContentTemplate>
+                                        <li><a runat="server" href="~/Admin/Users/Default">Admin panel <i class="material-icons">supervisor_account</i></a></li>
+                                    </ContentTemplate>
+                                </asp:RoleGroup>
+                            </RoleGroups>
+                        </asp:LoginView>
                     </ul>
                     <asp:LoginView runat="server" ViewStateMode="Disabled">
                         <AnonymousTemplate>
