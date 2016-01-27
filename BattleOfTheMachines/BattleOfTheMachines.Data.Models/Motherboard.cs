@@ -50,5 +50,9 @@
         public string NetworkId { get; set; }
 
         public virtual Network Network { get; set; }
+
+        public DateTime? OnQuestUntil { get; set; }
+
+        public int CurrentQuestReward { get; set; }
     }
 }

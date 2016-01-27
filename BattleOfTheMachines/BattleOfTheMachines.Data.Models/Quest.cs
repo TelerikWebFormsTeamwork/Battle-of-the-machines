@@ -20,10 +20,13 @@
         public string Description { get; set; }
 
         [Required]
-        public float DurationInMinutes { get; set; }
+        public int DurationInMinutes { get; set; }
 
         public byte[] Image { get; set; }
 
         public PartType Specialization { get; set; }
+
+        [Required]
+        public float PowerRequired { get; set; }
     }
 }

@@ -16,7 +16,7 @@
                         <div class="form-group">
                             <asp:Label runat="server" AssociatedControlID="name" CssClass="col-md-2 control-label">Name</asp:Label>
                             <div class="col-md-10">
-                                <asp:TextBox runat="server" ID="name" CssClass="form-control" Placeholder="Name"/>
+                                <asp:TextBox runat="server" ID="name" CssClass="form-control" Placeholder="Name" />
                                 <asp:RequiredFieldValidator runat="server" ControlToValidate="name"
                                     CssClass="text-danger" ErrorMessage="The name field is required." />
                             </div>
@@ -31,7 +31,13 @@
                         <div class="form-group">
                             <label for="duration" class="col-md-2 control-label">Duration</label>
                             <div class="col-md-10">
-                                <input type="number" class="form-control" id="duration" runat="server" min="0" Placeholder="Duration" required>
+                                <input type="number" class="form-control" id="duration" runat="server" min="0" placeholder="Duration" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <asp:Label runat="server" AssociatedControlID="powerRequired" for="powerRequired" CssClass="col-md-2 control-label">Required power</asp:Label>
+                            <div class="col-md-10">
+                                <input type="number" step="0.01" class="form-control" id="powerRequired" runat="server" min="0" required>
                             </div>
                         </div>
                         <div class="form-group">
@@ -45,7 +51,7 @@
                             <asp:Label runat="server" AssociatedControlID="questImage" CssClass="col-md-2 control-label">Image</asp:Label>
                             <div class="col-md-10">
                                 <input type="text" readonly="" class="form-control" placeholder="Browse...">
-                                <asp:FileUpload runat="server" ID="questImage"/>
+                                <asp:FileUpload runat="server" ID="questImage" />
                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator" runat="server"
                                     ControlToValidate="questImage" ErrorMessage="File Required!">
                                 </asp:RequiredFieldValidator>
@@ -53,7 +59,7 @@
                         </div>
                         <div class="form-group">
                             <div class="col-md-10 col-md-offset-2">
-                                <asp:Button Text="Add" runat="server" OnClick="AddQuest_Click" CssClass="btn btn-primary"/>
+                                <asp:Button Text="Add" runat="server" OnClick="AddQuest_Click" CssClass="btn btn-primary" />
                             </div>
                         </div>
                     </fieldset>

@@ -215,6 +215,7 @@
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
     <Content Include="Admin\Cpus\Insert.aspx" />
+    <Content Include="App_Data\loading-gears-animation.gif" />
     <Content Include="Controls\DropdownMenu.ascx" />
     <Content Include="Admin\GraphicsCards\Insert.aspx" />
     <Content Include="Admin\Networks\Insert.aspx" />
@@ -286,6 +287,7 @@
     <Content Include="Images\1.jpg" />
     <Content Include="Images\2.jpg" />
     <Content Include="Images\3.jpg" />
+    <Content Include="Quests\ViewQuests.aspx" />
     <Content Include="Images\graphics_default.png" />
     <Content Include="Images\machine.png" />
     <Content Include="Images\memory_default.png" />
@@ -303,6 +305,7 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\ripples.min.js" />
+    <Content Include="Scripts\Timer.js" />
     <Content Include="Scripts\WebForms\DetailsView.js" />
     <Content Include="Scripts\WebForms\Focus.js" />
     <Content Include="Scripts\WebForms\GridView.js" />
@@ -872,6 +875,13 @@
     <Compile Include="Shop.aspx.designer.cs">
       <DependentUpon>Shop.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Quests\ViewQuests.aspx.cs">
+      <DependentUpon>ViewQuests.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Quests\ViewQuests.aspx.designer.cs">
+      <DependentUpon>ViewQuests.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -910,7 +920,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>

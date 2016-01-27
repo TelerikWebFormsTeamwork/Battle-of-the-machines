@@ -1,9 +1,8 @@
 ﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="BattleOfTheMachines.WebForms._Default" %>
 
-<%@ OutputCache VaryByParam="None" Duration="300" %>
-
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-
+    <!--TODO TODO TODO TODO TODO TODO TODO.... TODO TODO - cache only container
+        <%@ OutputCache VaryByParam="None" Duration="300" %>-->
     <div class="jumbotron">
         <h1>Battle of the Machines</h1>
         <p class="lead">Lead your PC to glory! Start from scrap and make it the most powerful computer out there. Do quests, buy parts or clock the current to achieve the unthinkable.</p>

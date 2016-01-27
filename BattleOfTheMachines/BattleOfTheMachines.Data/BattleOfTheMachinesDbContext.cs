@@ -10,7 +10,7 @@
             : base("DefaultConnection", throwIfV1Schema: false)
         {
         }
-
+        
         public virtual IDbSet<Quest> Quests { get; set; }
 
         public virtual IDbSet<GraphicsCard> GraphicsCards { get; set; }
