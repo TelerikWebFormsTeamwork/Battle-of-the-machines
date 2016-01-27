@@ -252,6 +252,7 @@
     <Content Include="Content\ripples.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Controls\MachineView.ascx" />
+    <Content Include="Controls\Rankings.ascx" />
     <Content Include="DynamicData\FieldTemplates\Boolean.ascx" />
     <Content Include="DynamicData\FieldTemplates\Boolean_Edit.ascx" />
     <Content Include="DynamicData\FieldTemplates\Children.ascx" />
@@ -282,6 +283,9 @@
     <Content Include="Admin\Admin.master" />
     <Content Include="Admin\Web.config" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Images\1.jpg" />
+    <Content Include="Images\2.jpg" />
+    <Content Include="Images\3.jpg" />
     <Content Include="Images\graphics_default.png" />
     <Content Include="Images\machine.png" />
     <Content Include="Images\memory_default.png" />
@@ -700,6 +704,13 @@
     </Compile>
     <Compile Include="Controls\MachineView.ascx.designer.cs">
       <DependentUpon>MachineView.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Rankings.ascx.cs">
+      <DependentUpon>Rankings.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Rankings.ascx.designer.cs">
+      <DependentUpon>Rankings.ascx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
