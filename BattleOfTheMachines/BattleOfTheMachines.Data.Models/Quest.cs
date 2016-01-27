@@ -8,11 +8,11 @@
     {
         public Quest()
         {
-            this.Id = Guid.NewGuid();
+            this.Id = Guid.NewGuid().ToString();
         }
 
         [Key]
-        public Guid Id { get; private set; }
+        public string Id { get; private set; }
 
         [Required]
         public string Name { get; set; }

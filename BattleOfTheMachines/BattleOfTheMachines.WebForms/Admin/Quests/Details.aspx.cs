@@ -16,7 +16,7 @@
 
         // This is the Select methd to selects a single Quest item with the id
         // USAGE: <asp:FormView SelectMethod="GetItem">
-        public BattleOfTheMachines.Data.Models.Quest GetItem([FriendlyUrlSegmentsAttribute(0)]Guid? Id)
+        public BattleOfTheMachines.Data.Models.Quest GetItem([FriendlyUrlSegmentsAttribute(0)]string Id)
         {
             if (Id == null)
             {

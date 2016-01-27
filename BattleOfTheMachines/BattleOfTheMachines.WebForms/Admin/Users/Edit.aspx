@@ -1,7 +1,8 @@
 ﻿<%@ Page Title="UserEdit" Language="C#" MasterPageFile="~/Admin/Admin.master" CodeBehind="Edit.aspx.cs" Inherits="BattleOfTheMachines.WebForms.Admin.Users.Edit" %>
+
 <asp:Content runat="server" ContentPlaceHolderID="MainContent">
     <div>
-		<p>&nbsp;</p>
+        <p>&nbsp;</p>
         <asp:FormView runat="server"
             ItemType="BattleOfTheMachines.Data.Models.User" DefaultMode="Edit" DataKeyNames="Id"
             UpdateMethod="UpdateItem" SelectMethod="GetItem"
@@ -12,20 +13,24 @@
             <EditItemTemplate>
                 <fieldset class="form-horizontal">
                     <legend>Edit User</legend>
-					<asp:ValidationSummary runat="server" CssClass="alert alert-danger"  />                 
-						    <asp:DynamicControl Mode="Edit" DataField="Id" runat="server" />
-						    <asp:DynamicControl Mode="Edit" DataField="Email" runat="server" />
-						    <asp:DynamicControl Mode="Edit" DataField="PhoneNumber" runat="server" />
-						    <asp:DynamicControl Mode="Edit" DataField="UserName" runat="server" />
+                    <asp:ValidationSummary runat="server" CssClass="alert alert-danger" />
+                    <asp:DynamicControl Mode="Edit" DataField="Id" runat="server" />
+                    <asp:DynamicControl Mode="Edit" DataField="Email" runat="server" />
+                    <asp:DynamicControl Mode="Edit" DataField="PhoneNumber" runat="server" />
+                    <asp:DynamicControl Mode="Edit" DataField="UserName" runat="server" />
                     <div class="form-group">
                         <div class="col-sm-offset-2 col-sm-10">
-							<asp:Button runat="server" ID="UpdateButton" CommandName="Update" Text="Update" CssClass="btn btn-primary" />
-							<asp:Button runat="server" ID="CancelButton" CommandName="Cancel" Text="Cancel" CausesValidation="false" CssClass="btn btn-default" />
-						</div>
-					</div>
+                            <asp:Button runat="server" ID="UpdateButton" CommandName="Update" Text="Update" CssClass="btn btn-primary" />
+                            <asp:Button runat="server" ID="CancelButton" CommandName="Cancel" Text="Cancel" CausesValidation="false" CssClass="btn btn-default" />
+                        </div>
+                    </div>
                 </fieldset>
             </EditItemTemplate>
         </asp:FormView>
+        <div class="col-md-5">
+            <asp:Button runat="server" ID="MakeAdminButton" OnClick="MakeAdminButton_Click" Text="Make admin" CssClass="btn btn-raised btn-danger btn-block" />
+            <asp:Button runat="server" ID="RemoveAdminButton" OnClick="RemoveAdminButton_Click" Text="Remove admin" CssClass="btn btn-raised btn-danger btn-block" />
+        </div>
     </div>
 </asp:Content>
 

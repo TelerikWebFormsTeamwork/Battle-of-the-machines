@@ -22,7 +22,7 @@ namespace BattleOfTheMachines.WebForms.Admin.Rams
 
         // This is the Delete methd to delete the selected Ram item
         // USAGE: <asp:FormView DeleteMethod="DeleteItem">
-        public void DeleteItem(Guid Id)
+        public void DeleteItem(string Id)
         {
             using (_db)
             {
@@ -39,7 +39,7 @@ namespace BattleOfTheMachines.WebForms.Admin.Rams
 
         // This is the Select methd to selects a single Ram item with the id
         // USAGE: <asp:FormView SelectMethod="GetItem">
-        public BattleOfTheMachines.Data.Models.Ram GetItem([FriendlyUrlSegmentsAttribute(0)]Guid? Id)
+        public BattleOfTheMachines.Data.Models.Ram GetItem([FriendlyUrlSegmentsAttribute(0)]string Id)
         {
             if (Id == null)
             {

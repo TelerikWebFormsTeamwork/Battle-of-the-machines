@@ -11,5 +11,23 @@ namespace BattleOfTheMachines.WebForms.Admin.Users {
     
     
     public partial class Edit {
+        
+        /// <summary>
+        /// MakeAdminButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button MakeAdminButton;
+        
+        /// <summary>
+        /// RemoveAdminButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button RemoveAdminButton;
     }
 }

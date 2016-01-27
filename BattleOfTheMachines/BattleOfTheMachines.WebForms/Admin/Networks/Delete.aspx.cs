@@ -22,7 +22,7 @@ namespace BattleOfTheMachines.WebForms.Admin.Networks
 
         // This is the Delete methd to delete the selected Network item
         // USAGE: <asp:FormView DeleteMethod="DeleteItem">
-        public void DeleteItem(Guid Id)
+        public void DeleteItem(string Id)
         {
             using (_db)
             {
@@ -39,7 +39,7 @@ namespace BattleOfTheMachines.WebForms.Admin.Networks
 
         // This is the Select methd to selects a single Network item with the id
         // USAGE: <asp:FormView SelectMethod="GetItem">
-        public BattleOfTheMachines.Data.Models.Network GetItem([FriendlyUrlSegmentsAttribute(0)]Guid? Id)
+        public BattleOfTheMachines.Data.Models.Network GetItem([FriendlyUrlSegmentsAttribute(0)]string Id)
         {
             if (Id == null)
             {

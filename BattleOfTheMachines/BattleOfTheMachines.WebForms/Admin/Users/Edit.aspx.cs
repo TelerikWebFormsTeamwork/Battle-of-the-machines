@@ -1,27 +1,36 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.ModelBinding;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-using System.Data.Entity;
-using Microsoft.AspNet.FriendlyUrls.ModelBinding;
-using BattleOfTheMachines.Data.Models;
-using BattleOfTheMachines.Data;
-namespace BattleOfTheMachines.WebForms.Admin.Users
+﻿namespace BattleOfTheMachines.WebForms.Admin.Users
 {
+    using System;
+    using System.Web.UI.WebControls;
+    using Microsoft.AspNet.FriendlyUrls.ModelBinding;
+    using System.Linq;
+    using Data.Models;
+    using Microsoft.AspNet.Identity.EntityFramework;
+
     public partial class Edit : System.Web.UI.Page
     {
-		protected BattleOfTheMachines.Data.BattleOfTheMachinesDbContext _db = new BattleOfTheMachines.Data.BattleOfTheMachinesDbContext();
+        protected BattleOfTheMachines.Data.BattleOfTheMachinesDbContext _db = new BattleOfTheMachines.Data.BattleOfTheMachinesDbContext();
+        private string userId;
+        private User user;
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            userId = Request.Url.Segments[4];
+            user = _db.Users.Where(u => u.Id == userId).FirstOrDefault();
+
+            if (user.Roles.Count > 0)
+            {
+                MakeAdminButton.CssClass = "hidden";
+            }
+            else
+            {
+                RemoveAdminButton.CssClass = "hidden";
+            }
         }
 
         // This is the Update methd to update the selected User item
         // USAGE: <asp:FormView UpdateMethod="UpdateItem">
-        public void UpdateItem(string  Id)
+        public void UpdateItem(string Id)
         {
             using (_db)
             {
@@ -66,6 +75,24 @@ namespace BattleOfTheMachines.WebForms.Admin.Users
             {
                 Response.Redirect("../Default");
             }
+        }
+
+        protected void MakeAdminButton_Click(object sender, EventArgs e)
+        {
+            var adminRole = _db.Roles.Where(r => r.Name == "Admin").FirstOrDefault();
+            user.Roles.Add(new IdentityUserRole
+            {
+                RoleId = adminRole.Id
+            });
+            _db.SaveChanges();
+            Response.Redirect("../Default");
+        }
+
+        protected void RemoveAdminButton_Click(object sender, EventArgs e)
+        {
+            user.Roles.Clear();
+            _db.SaveChanges();
+            Response.Redirect("../Default");
         }
     }
 }
