@@ -851,6 +851,10 @@
     <Compile Include="Leaderboard.aspx.designer.cs">
       <DependentUpon>Leaderboard.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Models\CpuViewModel.cs" />
+    <Compile Include="Models\GraphicsViewModel.cs" />
+    <Compile Include="Models\NetworkViewModel.cs" />
+    <Compile Include="Models\RamViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Shop.aspx.cs">
       <DependentUpon>Shop.aspx</DependentUpon>
@@ -903,9 +907,7 @@
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
     </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Models\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\BattleOfTheMachines.Data.Models\BattleOfTheMachines.Data.Models.csproj">
       <Project>{07f9c9b6-279b-415e-a242-c3b7178c9323}</Project>

@@ -10,6 +10,12 @@ using Microsoft.AspNet.Identity;
 
 namespace BattleOfTheMachines.WebForms
 {
+    using System.Linq;
+
+    using BattleOfTheMachines.Data;
+    using BattleOfTheMachines.Data.Models;
+    using BattleOfTheMachines.Data.Repositories;
+
     public partial class SiteMaster : MasterPage
     {
         private const string AntiXsrfTokenKey = "__AntiXsrfToken";
@@ -69,7 +75,6 @@ namespace BattleOfTheMachines.WebForms
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
         }
 
         protected void Unnamed_LoggingOut(object sender, LoginCancelEventArgs e)
