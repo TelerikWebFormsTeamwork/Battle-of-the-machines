@@ -2,20 +2,16 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <h3><%: Title %>, based on their focus.</h3>
-    <%--<asp:UpdatePanel ID="TimerPanel" runat="server" UpdateMode="Conditional">
+    <asp:UpdatePanel ID="TimerPanel" runat="server" UpdateMode="Conditional">
         <ContentTemplate>
-            <asp:Timer ID="QuestTimer" Interval="1000" OnTick="QuestTimer_Tick" runat="server" />
-
-
+            <asp:Timer ID="QuestTimer" Interval="30100" OnTick="QuestTimer_Tick" runat="server" />
+            <h2 class="container">
+                <asp:Label ID="TimerLabel" CssClass="col-md-7" runat="server" Visible="true" />
+                <img id="TimerImage" src="/Images/loading-gears-animation.gif" alt="Quest in progress" runat="server" visible="false" class="pull-right" />
+                <asp:Button ID="QuestRewardButton" Text="Get your reward" runat="server" Visible="false" CssClass="btn btn-success" OnClick="QuestRewardButton_Click" />
+            </h2>
         </ContentTemplate>
-    </asp:UpdatePanel>--%>
-
-    <h2 class="container">
-        <asp:Label ID="TimerLabel" CssClass="col-md-7" runat="server" Visible="true" />
-        <img id="TimerImage" src="/Images/loading-gears-animation.gif" alt="Quest in progress" runat="server" visible="false" class="pull-right" />
-        <asp:Button ID="QuestRewardButton" Text="Get your reward" runat="server" Visible="false" CssClass="btn btn-success" OnClick="QuestRewardButton_Click" />
-    </h2>
-
+    </asp:UpdatePanel>
     <asp:Button Text="Processors" BorderStyle="None" ID="ProcessorsTab" CssClass="Initial" runat="server" OnCommand="TabCommand" CommandArgument="0" />
     <asp:Button Text="Rams" BorderStyle="None" ID="RamsTab" CssClass="Initial" runat="server" OnCommand="TabCommand" CommandArgument="1" />
     <asp:Button Text="Networks" BorderStyle="None" ID="Networkstab" CssClass="Initial" runat="server" OnCommand="TabCommand" CommandArgument="2" />

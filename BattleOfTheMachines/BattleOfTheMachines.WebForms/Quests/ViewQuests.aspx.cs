@@ -26,16 +26,27 @@
 
             var timer = this.Motherboards.GetQuestTimerById(userId);// - DateTime.Now;
 
+            // Get on quest view
             if (timer > DateTime.Now && !IsPostBack)
             {
                 this.TimerLabel.Text = TimerText + timer.ToString();
                 this.TimerImage.Visible = true;
+
+                DisableQuestButtons();
             }
 
+            // Get reward view
             if (timer != null && timer < DateTime.Now)
             {
                 this.TimerLabel.Text = RewardText;
                 this.QuestRewardButton.Visible = true;
+
+                DisableQuestButtons();
+            }
+
+            if (timer == null)
+            {
+                EnableQuestButtons();
             }
         }
 
@@ -124,7 +135,45 @@
         protected void QuestRewardButton_Click(object sender, EventArgs e)
         {
             this.Quests.FinishQuest(this.User.Identity.GetUserId());
+
             Response.Redirect(Request.RawUrl, false);
+        }
+
+        protected void QuestTimer_Tick(object sender, EventArgs e)
+        {
+
+            var userId = this.User.Identity.GetUserId();
+
+            var timer = this.Motherboards.GetQuestTimerById(userId);
+
+            if (timer > DateTime.Now && !IsPostBack)
+            {
+                this.TimerLabel.Text = TimerText + timer.ToString();
+                this.TimerImage.Visible = true;
+                
+            }
+
+            if (timer != null && timer < DateTime.Now)
+            {
+                this.TimerLabel.Text = RewardText;
+                this.QuestRewardButton.Visible = true;
+            }
+        }
+
+        private void EnableQuestButtons()
+        {
+            this.processorsQuestGrid.Columns[4].Visible = true;
+            this.ramQuestGrid.Columns[4].Visible = true;
+            this.networkQuestGrid.Columns[4].Visible = true;
+            this.graphicsCardQuestGrid.Columns[4].Visible = true;
+        }
+
+        private void DisableQuestButtons()
+        {
+            this.processorsQuestGrid.Columns[4].Visible = false;
+            this.ramQuestGrid.Columns[4].Visible = false;
+            this.networkQuestGrid.Columns[4].Visible = false;
+            this.graphicsCardQuestGrid.Columns[4].Visible = false;
         }
     }
 }

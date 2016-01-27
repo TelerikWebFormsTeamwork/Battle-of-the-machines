@@ -10,6 +10,7 @@
 
     public class QuestsService: IQuestsService
     {
+        private const int RewardValueWhenNotOnQuest = 0;
         private IRepository<Quest> quests;
         private IRepository<Motherboard> motherboards;
 
@@ -26,14 +27,14 @@
 
         public void StartQuest(string name, string ownerId)
         {
-            var questDuration = quests.All().Where(q => q.Name == name).FirstOrDefault().DurationInMinutes;
+            var quest = quests.All().Where(q => q.Name == name).FirstOrDefault();
 
             var motherboard = motherboards.All()
                 .Where(m => m.OwnerId == ownerId)
                 .FirstOrDefault();
 
-            motherboard.OnQuestUntil = DateTime.Now.AddMinutes(questDuration);
-
+            motherboard.OnQuestUntil = DateTime.Now.AddMinutes(quest.DurationInMinutes);
+            motherboard.CurrentQuestReward = (int)Math.Floor(quest.PowerRequired);
             motherboards.Update(motherboard);
             motherboards.SaveChanges();
         }
@@ -45,11 +46,10 @@
                 .FirstOrDefault();
 
             motherboard.OnQuestUntil = null;
-            //motherboard.Currency += 
+            motherboard.Currency += motherboard.CurrentQuestReward;
+            motherboard.CurrentQuestReward = RewardValueWhenNotOnQuest;
             motherboards.Update(motherboard);
             motherboards.SaveChanges();
-
-
         }
 
         public void Add(string name, string description, int duration, float powerRequired, byte[] image, PartType specialization)
