@@ -32,7 +32,7 @@
             var motherboard = motherboards.All()
                 .Where(m => m.OwnerId == ownerId)
                 .FirstOrDefault();
-
+            
             motherboard.OnQuestUntil = DateTime.Now.AddMinutes(quest.DurationInMinutes);
             motherboard.CurrentQuestReward = (int)Math.Floor(quest.PowerRequired);
             motherboards.Update(motherboard);

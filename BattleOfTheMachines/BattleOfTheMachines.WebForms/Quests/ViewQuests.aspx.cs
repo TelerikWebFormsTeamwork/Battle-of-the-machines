@@ -1,8 +1,11 @@
 ﻿namespace BattleOfTheMachines.WebForms.Quests
 {
     using System;
+    using System.Data.Entity;
     using System.Linq;
     using System.Web.UI.WebControls;
+
+    using BattleOfTheMachines.Data.Repositories;
     using BattleOfTheMachines.Services.Data.Contracts;
     using Data.Models;
     using Data.Models.Enums;
@@ -20,9 +23,11 @@
         [Inject]
         public IMotherboardService Motherboards { get; set; }
 
+        private BattleOfTheMachinesDbContext db;
+
         protected void Page_Load(object sender, EventArgs e)
         {
-            var db = new BattleOfTheMachinesDbContext();
+            db = new BattleOfTheMachinesDbContext();
             var machine = db.Machines.ToList().FirstOrDefault(x => x.OwnerId == Context.User.Identity.GetUserId());
 
             if (machine == null)
@@ -103,6 +108,17 @@
             var selectedRow = this.processorsQuestGrid.Rows[index];
             var questName = (selectedRow.Cells[0].Controls[0].Controls[0].Controls[0] as Literal).Text;
 
+            var quest = this.db.Quests.ToList().First(x => x.Name == questName);
+            var motherboard = this.db.Machines.ToList().First(x => x.OwnerId == User.Identity.GetUserId());
+
+            if (quest.PowerRequired
+                > (motherboard.Processor.Power + motherboard.Ram.Power + motherboard.Network.Power
+                   + motherboard.GraphicsCard.Power))
+            {
+                ErrorMessage.Text = "Nah... too powerful for ya'!";
+                return;
+            }
+
             this.Quests.StartQuest(questName, this.User.Identity.GetUserId());
 
             Response.Redirect(Request.RawUrl, false);
@@ -114,6 +130,17 @@
 
             var selectedRow = this.ramQuestGrid.Rows[index];
             var questName = (selectedRow.Cells[0].Controls[0].Controls[0].Controls[0] as Literal).Text;
+
+            var quest = this.db.Quests.ToList().First(x => x.Name == questName);
+            var motherboard = this.db.Machines.ToList().First(x => x.OwnerId == User.Identity.GetUserId());
+
+            if (quest.PowerRequired
+                > (motherboard.Processor.Power + motherboard.Ram.Power + motherboard.Network.Power
+                   + motherboard.GraphicsCard.Power))
+            {
+                ErrorMessage.Text = "Nah... too powerful for ya'!";
+                return;
+            }
 
             this.Quests.StartQuest(questName, this.User.Identity.GetUserId());
 
@@ -127,6 +154,17 @@
             var selectedRow = this.graphicsCardQuestGrid.Rows[index];
             var questName = (selectedRow.Cells[0].Controls[0].Controls[0].Controls[0] as Literal).Text;
 
+            var quest = this.db.Quests.ToList().First(x => x.Name == questName);
+            var motherboard = this.db.Machines.ToList().First(x => x.OwnerId == User.Identity.GetUserId());
+
+            if (quest.PowerRequired
+                > (motherboard.Processor.Power + motherboard.Ram.Power + motherboard.Network.Power
+                   + motherboard.GraphicsCard.Power))
+            {
+                ErrorMessage.Text = "Nah... too powerful for ya'!";
+                return;
+            }
+
             this.Quests.StartQuest(questName, this.User.Identity.GetUserId());
 
             Response.Redirect(Request.RawUrl, false);
@@ -138,6 +176,17 @@
 
             var selectedRow = this.networkQuestGrid.Rows[index];
             var questName = (selectedRow.Cells[0].Controls[0].Controls[0].Controls[0] as Literal).Text;
+
+            var quest = this.db.Quests.ToList().First(x => x.Name == questName);
+            var motherboard = this.db.Machines.ToList().First(x => x.OwnerId == User.Identity.GetUserId());
+
+            if (quest.PowerRequired
+                > (motherboard.Processor.Power + motherboard.Ram.Power + motherboard.Network.Power
+                   + motherboard.GraphicsCard.Power))
+            {
+                ErrorMessage.Text = "Nah... too powerful for ya'!";
+                return;
+            }
 
             this.Quests.StartQuest(questName, this.User.Identity.GetUserId());
 

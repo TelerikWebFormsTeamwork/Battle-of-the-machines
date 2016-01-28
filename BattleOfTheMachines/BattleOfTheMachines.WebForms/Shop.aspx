@@ -2,10 +2,9 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
-    <p class="text-danger">
-        <h2 class="text-danger">
-            <asp:Literal runat="server" ID="ErrorMessage" /></h2>
-    </p>
+    <div class="text-danger">
+        <h2 class="text-danger"><asp:Literal runat="server" ID="ErrorMessage" /></h2>
+    </div>
 
     <div class="well well-sm"><strong>My money: </strong><span runat="server" id="money"></span></div>
 

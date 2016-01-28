@@ -2,6 +2,11 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <h3><%: Title %>, based on their focus.</h3>
+    
+    <div class="text-danger">
+        <h2 class="text-danger"><asp:Literal runat="server" ID="ErrorMessage" /></h2>
+    </div>
+
     <asp:UpdatePanel ID="TimerPanel" runat="server" UpdateMode="Conditional">
         <ContentTemplate>
             <asp:Timer ID="QuestTimer" Interval="30100" OnTick="QuestTimer_Tick" runat="server" />
